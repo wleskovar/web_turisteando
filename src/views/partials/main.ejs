@@ -1,0 +1,34 @@
+<main class="main">
+    <form class= "form_main" action="/busqueda_paquetes" method="post" id="form_home">
+        <div class="origen">
+            <label for="origen">Origen del viaje: </label>
+            <select name="origen">
+                <option value="buenos_aires">Buenos Aires</option>
+                <option value="rosario">Rosario</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="tucuman">Tucumán</option>
+            </select>
+        </div>
+        <div class="paquete">
+            <label for="paquete">Paquetes turísticos: </label>
+            <select name="paquetes">
+                <option value="buenos_aires">Buenos Aires</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="bariloche">Bariloche</option>
+                <option value="calafate">Calafate</option>  
+                <option value="fin_mundo">Fin del Mundo</option>
+                <option value="iguazu">Iguazú</option>
+                <option value="san_rafael">San Rafael</option>
+                <option value="ushuaia">Ushuaia</option>
+            </select name="paquetes">
+        </div>
+        <div class="fecha">
+            <label for="fecha">Fecha del viaje: </label>
+            <input type="date" id="fecha" name="trip-start"
+                value="2022-04-18"
+                min="2022-04-18" max="2022-12-31">
+        </div>
+    </form>
+    <button class= "boton_main" type="submit" form="form_home" value="Submit">Buscar</button>
+</main>
