@@ -1,0 +1,21 @@
+==== Generales
+Uso la libreria normalize.css
+
+==== COLORES
+Logo:
+    TURISTEANDO: RGB(45 149 19)
+    Simbolo Cielo: RGB(33 182 213)
+    Tierra: RGB(132 7 7)
+Header:
+    background-color: beige;
+
+==== Tipografia
+Google:  Roboto
+"https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap"
+
+==== Foco en elemento de menu :hover
+    background-color:rgb(195, 236, 158); 
+
+==== Contenedor de los articulos
+    Color y estilo del borde del contenedor: border: solid 8px beige;
+    Color interior del contenedor: background-color: rgb(240,249,232);

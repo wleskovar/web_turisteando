@@ -1,0 +1,765 @@
+*{
+    box-sizing: border-box
+}
+
+header {
+    font-family: 'Roboto', sans-serif;
+    }
+
+footer {
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 0;
+    }
+
+main{
+    min-height: 450px;
+}
+body{   
+    
+    font-size: medium;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-size: 16px;
+    border: 0;
+    padding: 0;
+    margin: 0;
+   
+    }  
+ 
+.headerCart{
+    
+     background-color: beige;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 0;
+    position:static;
+    }
+.headerCart img{
+    display:flex;
+    margin: 10px 5px 5px 10px;
+    width: 180px;   
+}
+.navCart{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    /* border: 2px solid salmon;*/
+    margin: 5px;
+}
+.navCart img{
+    width: 15px;    
+    display: flex;
+}
+.navCenter{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+    display: none;
+    /*border: solid blue  2px;*/
+}   
+.navCenter li{
+    padding: 20px;
+}
+
+.navRigth{
+    display: flex;
+    align-items: flex-end;
+    list-style: none;
+   
+    align-self:flex-end;
+}
+.hamburguer{
+    display: flex;
+     width: 30px;
+    margin: 0;
+ align-self: flex-start;
+}
+.listaCompra  {
+display: flexbox;
+/*border: solid red 2px;*/
+margin-top: 0;
+justify-content:center;
+flex-direction: row;    
+}
+
+section h2{
+
+    margin: 5px;
+    margin-bottom: 15px;
+    /*border: solid blue 4px;*/
+    font-size: 14px;
+    margin: 0;
+}
+
+.porComprar{
+    display: flex;
+    /*border: solid black 5px;*/
+    flex-direction: column;
+    background-color: rgb(240,249,232) ;
+    border: solid 8px beige;
+    justify-content: center;
+}
+
+.porComprar img{
+    display: flex;
+    margin-left: 10px; 
+    width: 200px;
+    /*border: solid yellow 5px;*/
+    align-self: center;
+    align-items: center;
+    margin-top: 5px;
+    margin: 3px;
+    padding: 3px;
+}
+
+.descripcion{
+    display: flex;
+    margin-top: 10px;
+    font-weight: bold ;
+   /* border: yellow solid 8px;*/
+    align-items: center;
+    align-self: center;
+    font-size: 14px;
+    padding: 0 10px 0 6px;
+}
+.radioButton{
+    display: flex;
+    flex-direction: column;
+   /* border: yellow solid 3px;*/
+    align-items: center;
+    align-self: center;
+    font-size: 12px;  
+}
+
+.monto{
+    display: flex;
+    /*border: yellow solid 8px;*/
+    align-items: center;
+  
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+}
+.monto p{
+    
+    font-size: 10px;
+    box-sizing: content-box;
+    
+    width: 100%;
+    padding: 10px;
+    color: rgb(132 7 7);
+    font-style: italic;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1px;
+    text-decoration:double;
+    }
+
+.pagoTotal{
+    display: flex;
+    /*border: solid violet 5px;*/
+    justify-content: flex-end;
+    }
+.textTotal{
+    margin-right: 5px;
+    font-weight: bold;
+    }
+.montoTotal{
+    color:  rgb(132 7 7);
+    text-decoration: double;
+    font-weight: bold;
+}
+
+.botonPago{
+    background-color: #646464;
+    border: none;
+    margin-left: 10px;
+    font-size: 1em;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 450ms;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    align-self: center;
+}
+.botonPago:hover {
+    background-color: rgb(6, 141, 62);
+}
+
+.actionCart ul{
+    display: flex;
+    list-style: none;
+    justify-content:center; 
+    text-decoration: none;
+    padding: 10px;
+    font-size: 12px;
+        }
+
+    .actionCart ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+    }
+    .actionCart ul li i{
+        display: flex;
+        font-size: 20px;
+        color: rgb(6, 141, 62);
+    } 
+/****** cartForm**********/
+
+.pasajeros{
+     /* border: solid yellow 3px;*/
+    display: flex;
+    justify-content:flex-start;
+    justify-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h4{
+    display: flex;
+    justify-content:left;
+    align-items: flex-start;
+    text-align:start;
+    margin: 5px;
+     /* border: solid rgb(238, 186, 130) 3px;*/
+    
+}
+.cantidadPasajeros{
+     /* border: solid violet 3px;*/
+    display: flex;
+    max-width: max-content;
+    flex-direction: row;    
+    margin: 5px;
+}
+.cantidadPasajeros label  {
+     /* border: solid black 3px;*/
+    font-size: 12px;
+    margin: 5px;
+    }
+.cantidadPasajeros select{
+   
+    font-size: 10px;
+    width: 30px;
+    height: 20px;
+}
+.datosPasajeros{
+    font-size: 8;
+    display: flex;
+    flex-direction: column;
+    max-width:100%;
+     /* border: solid red 3px;*/
+    }
+.datosPasajeros div{
+     display: flex;
+    margin: 5px;
+    flex-direction: column;
+     /* border: solid blue 3px;*/
+    font-size: 12px;
+    margin: 5px;
+     width: 100%;
+    }
+
+.pasajeros input{
+    /* border: solid brown 3px;*/
+    display: flex;
+   margin-right: 20px;
+    font-size: 10px;
+    font-style: italic;
+    
+    
+}
+
+.pago{
+    font-size: 8;
+    display: flex;
+    flex-direction: column;
+    max-width:100%;
+     /* border: solid red 3px;*/
+}
+.medioPago{
+    font-size: 8;
+    display: flex;
+   
+}
+
+.medioPago div{
+     /* border: solid violet 3px;*/
+    display: flex;
+    max-width: max-content;
+    flex-direction: row;    
+    margin: 5px;
+}
+.medioPago label{
+    font-size: 12px;
+}
+
+.pagoTarjeta{
+    font-size: 8px;
+     /* border: solid green 3px;  */
+   
+ 
+}
+.pagoTarjeta div{
+    display: flex;
+    margin: 5px;
+    flex-direction: column;
+     /* border: solid blue 3px;*/
+    font-size: 12px;
+    margin: 5px;
+     width: 100%;
+    }
+.pago input{
+     /* border: solid brown 3px;*/
+    display: flex;
+   margin-right: 20px;
+    font-size: 10px;
+    font-style: italic;
+    
+     }
+
+    .bottonForm{
+        display: flex;
+        flex-direction: row;
+        font-size: 12px;
+        justify-content: center;
+        margin: 5px;
+        }
+
+ /* Footer  */
+
+
+ .index_footer {
+
+    margin: 10px 0;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+ }
+.header_footer {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.index_footer .header_footer .hamburguer-button {
+
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    align-self: flex-start;  
+}
+.menu_footer {
+    display: none;
+}
+.index_footer .logo {
+ 
+    max-width: 90px;
+    max-height: 36px;
+}
+.body_footer {
+   
+    margin-top: 4px;
+    margin-bottom: 4px;
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.body_footer form {
+    padding: 2px;
+    font-size: small;
+    font-style: italic;
+}
+.body_footer button {
+    padding: 2px;
+    flex-grow: 0.25;
+    align-self: flex-start;
+}
+.iconos_sociales {
+  
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.iconos_sociales img {
+    width: 20px;
+    height: 20px;
+}
+.iconos_sociales img:hover {
+    width: 25px;
+    height: 25px;
+}
+
+/* .... CART FINAL..*/
+
+    h1{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        color: white;
+        text-decoration:double;
+        background-color:   rgb(132 7 7);
+
+        -webkit-box-shadow: 15px -9px 19px -10px rgba(0,0,0,0.75);
+        -moz-box-shadow: 15px -9px 19px -10px rgba(0,0,0,0.75);
+        box-shadow: 15px -9px 19px -10px rgba(0,0,0,0.75);
+
+        box-sizing: content-box;
+        width: 100%;
+        border: solid  10p rgb(132 7 7);
+        padding: 10px;
+
+        text-shadow: 2px 2px 3px rgb(161, 155, 155);
+        }
+    .textFinalCart{
+        
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        margin: 20px;
+        border: solid 8px beige;
+        padding: 40px;
+
+    }
+    .logoFinal{
+        display: flex;
+        justify-content: center;
+       
+    }
+    .logoFinal img{
+       
+        display: flex;
+        width: 100px;
+        justify-items: center;
+        align-items: center;
+        align-self: center;
+        margin-top: 10px;
+       ;
+    }
+
+    .logoFinal img {
+        animation-duration: 4s;
+        animation-name: logo;
+        animation-timing-function:linear;
+        animation-iteration-count: infinite;
+        }
+      
+        @keyframes logo {
+        0% {width: 75px;}  50% {width: 100px;}  100% {width: 200px;} 
+        0% {width: 200px;}  50% {width: 10px;}  100% {width: 50px;} 100% {width: 200px;} 
+            }
+            
+
+/* .... MEDIA QUERIS..*/
+
+@media (min-width: 768px) {
+    /* Header */
+    
+    .hamburguer {
+        display: none;
+    }
+    .headerCart {
+        justify-content: space-between;
+         }
+
+    .navCart {
+        /*border: dotted 2px rgb(0, 255, 47); */
+        display: flex;
+        justify-content: center;
+        width: 768px;
+    }
+    .navCenter {
+        /*border: dotted 2px red;*/
+        display: flex;
+        flex-direction: row;
+        
+    }
+    
+    .navCenter li:hover {
+        background-color:rgb(195, 236, 158);      
+    }
+    /*CART FORM*/
+  
+    
+    .listaCompra{
+       position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        margin-left: 20px;
+
+       /* border: solid black 5px;*/
+    }
+    .porComprar{
+        display: flex;
+        /*border: solid rgb(255, 0, 174) 5px;*/
+        width: 80%;
+        flex-direction:row;
+        justify-content: center;
+        background-color: rgb(240,249,232) ;
+        border: solid 8px beige;
+    }
+    .descripcion{
+        display: flex;
+        font-size: 8px;
+        align-self:center;
+       /* border: solid red 5px;*/
+        font-size: 15px;
+        text-align:center;
+        padding: 0;
+        margin: 0;
+        font-weight: 300;
+        width: 50%;
+      }
+    .monto{
+        align-self: flex-start;
+        /*border: solid blue 5px;*/
+        width: 50%;
+        align-self: center;
+    }
+    .monto p{
+        padding: 0;
+    }
+    
+    .montoTotal{
+        color:  rgb(132 7 7);
+        text-decoration: double;
+        font-weight: bold;
+        font-size: 15px;
+         }
+
+    .pagoTotal{
+        position: absolute;
+        width: 20%;
+       /* border: solid green 5px;*/
+        top: 15px;
+        right: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        background-color: rgb(240,249,232) ;
+        border: solid 8px beige;
+    }
+    
+    .actionCart{
+        display: flex;
+        width: 20%;
+        /*border: solid orange 5px;*/
+        flex-direction: row;
+        text-align: center;
+        justify-content: center;
+        margin:5px;
+       }
+    
+    .actionCart ul li{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+        margin: 5px;;
+        padding: 0;
+        font-size: 10px;
+    }
+    .actionCart  ul li i{
+        flex-direction: column;
+        display: flex;
+        font-size: 10px;
+        color: rgb(6, 141, 62);
+        
+    } 
+    
+    .radioButton{
+        display: flex;
+        flex-direction: column;
+        /*border: yellow solid 3px;*/
+        align-items: center;
+        align-self: center;
+        font-size: 12px;  
+        
+    }
+        /* Footer */
+    
+    .header_footer .left_header_menu {
+        /*border: dotted 2px black;*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .header_footer .left_header_menu li {
+        margin: 5px 8px;
+        list-style-type: none;
+    }
+    
+    .header_footer .left_header_menu li:hover {
+        background-color:rgb(195, 236, 158);      
+    }
+    
+    
+    .index_footer .header_footer .hamburguer-button {
+        display: none;
+    }   
+    
+    .menu_footer {
+        display: block;
+    }
+    
+    .index_footer .logo {
+        /*border: dotted 2px rgb(119, 0, 255);*/
+        max-width: 126px;
+        max-height: 50.4px;
+    }
+
+/*-----CartForm----*/
+   main{
+       display: flex;
+        flex-direction: row;
+        justify-content:center;
+      
+       }
+
+   .pasajeros{
+       min-width: 340px;
+       max-width: 769px;
+    /*border: solid yellow 3px;*/
+    display: flex;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: rgb(240,249,232) ;
+    border: solid 8px beige;
+    margin-right: 20px;
+    }
+    h4{
+        padding: 5px;
+        margin: 5px;
+    }
+    .pago{
+        min-width: 340px;
+        max-width: 769px;
+          /*border: solid yellow 3px;*/
+        padding: 10px;
+        margin-top: 10px;
+        background-color: rgb(240,249,232) ;
+        border: solid 8px beige;
+        margin-left: 20px;
+        
+      }
+    .medioPago{
+          /*border: solid rgb(0, 166, 255) 10px;*/
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        margin: 5px;
+        max-width: max-content;
+        
+    }
+    .cantidadPasajeros{
+          /*border: solid violet 3px;*/
+        display: flex;
+       min-width: max-content;
+        justify-content: space-between;
+        flex-direction: row; 
+          }
+    .medioPago div{
+            /*border: solid violet 3px;*/
+            display: flex;
+           min-width: max-content;
+            justify-content: space-between;
+            flex-direction: row; 
+        }
+    .bottonForm{
+            display: flex;
+            flex-direction: row;
+            font-size: 12px;
+            margin-bottom: 10px;
+           
+            justify-content: center;
+            
+            }
+ /* CART FINAL */
+
+    .final{
+       
+        display: block;
+        flex-direction: column;
+     
+    }
+    h1{
+        
+        padding: 20px;
+    }
+    .textFinalCart{
+        margin: 10px;
+        border: solid 8px beige;
+        padding: 20px;
+        }
+    .logoFinal img{
+       
+            display: flex;
+            width: 100px;
+            justify-items: center;
+            align-items: center;
+            align-self: center;
+            margin-top: 10px;
+          
+        }
+    
+    .logoFinal img {
+            animation-duration: 5s;
+            animation-name: logo;
+            animation-timing-function:linear;
+            animation-iteration-count: infinite;
+            }
+          
+            @keyframes logo {
+            0% {width: 75px;}  50% {width: 100px;}  100% {width: 200px;} 
+            0% {width: 200px;}  50% {width: 10px;}  100% {width: 50px;} 100% {width: 250px;} 
+                }
+}
+ 
+@media (min-width: 1200px) {
+    .navCart{
+        max-width: 1200px;
+    }
+    .listaCompra{
+        display: flex;
+        justify-content: flex-start;
+        margin-left: 50px;
+        margin-top: 10px;
+     }   
+     
+    .pagoTotal{
+    right: 100px;
+
+    }
+    .porComprar{
+        width: 100%;
+        justify-content:space-between;
+       }
+       main{
+        display: flex;
+         flex-direction: column;
+         justify-content:center;
+       
+        }
+    .pasajeros{
+        margin: 10px;
+    }
+       
+  .pago{
+      margin: 10px;
+  }
+}

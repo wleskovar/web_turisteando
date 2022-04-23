@@ -1,0 +1,25 @@
+{
+  "name": "grupo_2_turisteando",
+  "version": "1.0.0",
+  "description": "Proyecto integrador Digital House: Turisteando Somos Walter Leskovar, Facundo Minuto, Ignacio Parisi y Silvana Acotto, estudiantes del curso de Programación Full Stack dictado por Digital House.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grupo2turisteando/grupo_2_turisteando.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grupo2turisteando/grupo_2_turisteando/issues"
+  },
+  "homepage": "https://github.com/grupo2turisteando/grupo_2_turisteando#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "normalize": "^0.3.1"
+  }
+}

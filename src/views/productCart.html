@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chartset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="/css/stylesCart.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/a2385b59a3.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Cart</title>
+</head>
+<body>
+    <header class="headerCart">
+        <a href="#" class="hamburguer">
+            <img src="/images/bars-solid.svg" alt="hamburguer" >
+        </a>
+        
+        <a href="./index"><img src="/images/logo_turisteando.png"></a>
+            
+            <nav class="navCart">
+                <ul class="navCenter"> 
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/productDetail">Paquetes</a></li>
+                    <li><a href="/productDetail">Ofertas</a></li>
+                    <li><a href="/">Contacto</a></li>
+                </ul>        
+                <ul class="navRigth">
+                    <li><a href="./login"><img src="/images/user-solid.svg" alt="Login"></a></li>
+                    <li><a href="./register"><img src="/images/user-plus-solid.svg" alt="Sign Up"></a></li>
+                    <li><a href="./productCart"><img src="/images/cart-shopping-solid.svg" alt="Shopping Cart"></a></li>
+                </ul>      
+            </nav>   
+    </header>
+    
+    <main class="listaCompra">
+        <section>
+               <h2>Carrito</h2>
+            <article class="porComprar">
+                <img src="/images/Bariloche300x200.webp" alt="Foto Bariloche">
+            
+                <div class="descripcion">
+                      Bariloche todos los circuitos
+                </div>
+                <div class="monto">
+                    <p> 20% OFF </p>
+                    <strong > $40.000 </strong>
+                       
+                </div>
+                
+                <div class="actionCart">
+                    <ul >
+                        <li><a href="./index"> 
+                            <i class="fa-solid fa-cart-shopping"></i></a>
+                            <p>Seguir comprando</p>
+                        </li>
+                        <li> <a href="#eliminar">
+                            <i class="fa-solid fa-trash-can"></i></a>
+                             <p>Eliminar</p>
+                        </li>
+                    </ul>
+            
+                </div>
+            </article>
+            
+                
+                <form class="pagoTotal" action="cartForm"  method="get" id="form_pago">   
+                    <p class="textTotal">Total:</p>
+                    <p class="montoTotal"><strong>$40.000</p></strong>
+                    
+               <a href="./cartForm"> <button class="botonPago" type="submit" value="sumbit" form="form_pago">Pagar</button></a>
+                </form>
+            
+            
+        </section>
+    </main>
+        
+            <footer class="index_footer">
+                <div class="header_footer">
+                    <a href="#" class="hamburguer-button">
+                        <img src="/images/bars-solid.svg" alt="hamburguer" >
+                    </a>
+                    <img class= "logo" src="/images/logo_turisteando.png" alt="Logo Turisteando">         
+                    <nav class="menu_footer">
+                        <ul class="left_header_menu"> 
+                            <li><a href="/index">Home</a></li>
+                            <li><a href="/productDetail">Paquetes</a></li>
+                            <li><a href="/productDetail">Ofertas</a></li>
+                            <li><a href="/">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="body_footer">
+                    <form class= "form_footer" action="/subscripcion" method="post" id="form_footer">
+                        <label for="email">Recibí nuestras ofertas:</label>
+                        <input type="email" name="email" id="email" required placeholder="correo electrónico">
+                    </form>
+                    <button class= "button_footer" type="submit" form="form_footer" value="Submit">Quiero las ofertas!</button>
+                </div>
+                <div class="iconos_sociales">
+                    <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/facebook-square-brands.svg" width="106px" height="122px"alt="Seguinos en Facebook"></a>
+                    <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/instagram-brands.svg" width="106px" height="122px"alt="Seguinos en Instagram"></a>
+                    <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/whatsapp-square-brands.svg" width="106px" height="122px"alt="Seguinos en WhatsApp"></a>
+                    <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/twitter-brands.svg" width="106px" height="122px"alt="Seguinos en Twitter"></a>
+                    <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/youtube-brands.svg" width="106px" height="122px"alt="Seguinos en YouTube"></a>
+                </div>
+        </footer>
+
+
+</body>
+</html>

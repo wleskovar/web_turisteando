@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta chartset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home Turisteando</title>
+        <!--<link rel="stylesheet" href="/css/styles.css">-->
+        <link rel="stylesheet" href="/css/styles_index.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="/css/normalize.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <header class="index_header">
+            <a href="#" class="hamburguer-button">
+                <img src="/images/bars-solid.svg" alt="hamburguer" >
+            </a>
+            <img class= "logo" src="/images/logo_turisteando.png" alt="Logo Turisteando">
+            
+            <nav class="nav_menu1">
+                <ul class="ul_1"> 
+                     <li><a href="/index">Home</a></li>
+                     <li><a href="/packages">Paquetes</a></li>
+                     <li><a href="/deals">Ofertas</a></li>
+                     <li><a href="/contacto">Contacto</a></li>
+                 </ul>
+            </nav>
+                        
+            <nav class="nav_menu2">
+                 <ul class="ul_2">
+                     <li><a href="/login"><img src="/images/user-solid.svg" alt="Login" ></a></li>
+                     <li><a href="/register"><img src="/images/user-plus-solid.svg" alt="registro" ></a></li>
+                     <li><a href="/productCart"><img src="/images/cart-shopping-solid.svg" alt="carrito" ></a></li>
+                 </ul>
+            </nav>
+        </header>
+        <main class="main">
+            <form class= "form_main" action="/busqueda_paquetes" method="post" id="form_home">
+                <div class="origen">
+                    <label for="origen">Origen del viaje: </label>
+                    <select name="origen">
+                        <option value="buenos_aires">Buenos Aires</option>
+                        <option value="rosario">Rosario</option>
+                        <option value="cordoba">Córdoba</option>
+                        <option value="mendoza">Mendoza</option>
+                        <option value="tucuman">Tucumán</option>
+                    </select>
+                </div>
+                <div class="paquete">
+                    <label for="paquete">Paquetes turísticos: </label>
+                    <select name="paquetes">
+                        <option value="buenos_aires">Buenos Aires</option>
+                        <option value="mendoza">Mendoza</option>
+                        <option value="bariloche">Bariloche</option>
+                        <option value="calafate">Calafate</option>  
+                        <option value="fin_mundo">Fin del Mundo</option>
+                        <option value="iguazu">Iguazú</option>
+                        <option value="san_rafael">San Rafael</option>
+                        <option value="ushuaia">Ushuaia</option>
+                    </select name="paquetes">
+                </div>
+                <div class="fecha">
+                    <label for="fecha">Fecha del viaje: </label>
+                    <input type="date" id="fecha" name="trip-start"
+                        value="2022-04-18"
+                        min="2022-04-18" max="2022-12-31">
+                </div>
+            </form>
+            <button class= "boton_main" type="submit" form="form_home" value="Submit">Buscar</button>
+        </main>
+        <section class="paquetes">
+            <h3>Paquetes:</h3>
+            <div class="productos">  
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                            <img src="/images/Buenos_aires.webp" alt="Buenos_Aires">
+                        </a>  
+                    </figure>
+                    <p class="descripcion"><strong>Buenos Aires en 5 días</strong></p>    
+                    <p class="precio">Precio: $25.000</p>
+                    <p class="descuento">Oportunidad: 40% OFF</p>
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/Mendoza.webp" alt="Mendoza">
+                        </a>
+                    </figure class="product_image">
+                    <p class="descripcion"><strong>Visite la ciudad de Mendoza</strong></p>    
+                    <p class="precio">Precio: $36.770</p>
+                    <p class="descuento">Oportunidad: 10% OFF</p>  
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/Bariloche300x200.webp" alt="Bariloche">
+                        </a>
+                    </figure class="product_image">
+                    <p class="descripcion"><strong>Bariloche todos los circuitos</strong></p>    
+                    <p class="precio">Precio: $40.000</p>
+                    <p class="descuento">Oportunidad: 20% OFF</p>  
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/Calafate300x200.webp" alt="Calafate">
+                        </a>
+                    </figure>
+                    <p class="descripcion"><strong>Calafate y Glaciar Perito Moreno</strong></p>    
+                    <p class="precio">Precio: $52.000</p>
+                    <p class="descuento">Oportunidad: 30% OFF</p>  
+                </article>
+            </div> 
+        </section>
+        <section class="ofertas">
+            <h3>Ofertas:</h3>
+            <div class="prod_ofertas"> 
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/FinDelMundo300x200.webp" alt="Fin_del_Mundo">
+                        </a>
+                    </figure>
+                    <p class="descripcion"><strong>Fin del Mundo 7 días</strong></p>    
+                    <p class="precio">Precio: $85.000</p>
+                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/Iguazu300x200.webp" alt="Iguazú">
+                        </a>
+                    </figure>
+                    <p class="descripcion"><strong>Iguazú 4 días - Cataratas lado Argentino y Brasilero</strong></p>    
+                    <p class="precio">Precio: $50.000</p>
+                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/Ushuaia300x200.webp" alt="Ushuaia">
+                        </a>
+                    </figure>
+                    <p class="descripcion"><strong>Ushuaia 3 noches</strong></p>    
+                    <p class="precio">Precio: $40.000</p>
+                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
+                </article>
+                <article>
+                    <figure class="product_image">
+                        <a href="/productDetail">
+                        <img src="/images/SanRafael300x200.webp" alt="San_Rafael">
+                        </a>
+                    </figure>
+                    <p class="descripcion"><strong>San Rafael 4 días</strong></p>    
+                    <p class="precio">Precio: $35.000</p>
+                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
+                </article>
+            </div>
+        </section>
+        <footer class="index_footer">
+            <div class="header_footer">
+                <a href="#" class="hamburguer-button">
+                    <img src="/images/bars-solid.svg" alt="hamburguer" >
+                </a>
+                <img class= "logo" src="/images/logo_turisteando.png" alt="Logo Turisteando">         
+                <nav class="menu_footer">
+                    <ul class="left_header_menu"> 
+                        <li><a href="/index">Home</a></li>
+                        <li><a href="/packages">Paquetes</a></li>
+                        <li><a href="/deals">Ofertas</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="body_footer">
+                <form class= "form_footer" action="/subscripcion" method="post" id="form_footer">
+                    <label for="email">Recibí nuestras ofertas:</label>
+                    <input type="email" name="email" id="email" required placeholder="correo electrónico">
+                </form>
+                <button class= "button_footer" type="submit" form="form_footer" value="Submit">Quiero las ofertas!</button>
+            </div>
+            <div class="iconos_sociales">
+                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/facebook-square-brands.svg" width="106px" height="122px"alt="Seguinos en Facebook"></a>
+                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/instagram-brands.svg" width="106px" height="122px"alt="Seguinos en Instagram"></a>
+                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/whatsapp-square-brands.svg" width="106px" height="122px"alt="Seguinos en WhatsApp"></a>
+                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/twitter-brands.svg" width="106px" height="122px"alt="Seguinos en Twitter"></a>
+                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/youtube-brands.svg" width="106px" height="122px"alt="Seguinos en YouTube"></a>
+            </div>
+
+
+            
+    </footer>
+           
+    </body>
+
+</html>
