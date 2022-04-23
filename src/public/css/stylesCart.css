@@ -78,140 +78,149 @@ body{
     margin: 0;
  align-self: flex-start;
 }
-.listaCompra  {
-display: flexbox;
-/*border: solid red 2px;*/
-margin-top: 0;
-justify-content:center;
-flex-direction: row;    
-}
 
-section h2{
 
-    margin: 5px;
-    margin-bottom: 15px;
+main section h2{
+
+   display: flex;
+    margin: 10px;
+    padding: 3px;
+    font-weight: 400;
     /*border: solid blue 4px;*/
-    font-size: 14px;
+    font-size: 15px;
     margin: 0;
+    border: solid 1px  rgb(132 7 7);;
+     
 }
 
 .porComprar{
+    position: relative;
     display: flex;
-    /*border: solid black 5px;*/
     flex-direction: column;
-    background-color: rgb(240,249,232) ;
-    border: solid 8px beige;
-    justify-content: center;
-}
+    /* border: solid yellow 5px*/
+    padding: 8x;
+    margin: 5px;
+    
+        }
+.porComprar a{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 5px;
+    font-size: 12px;
 
+}
+.porComprar i{
+    color:rgb(132 7 7);
+}
 .porComprar img{
     display: flex;
-    margin-left: 10px; 
-    width: 200px;
-    /*border: solid yellow 5px;*/
-    align-self: center;
-    align-items: center;
-    margin-top: 5px;
-    margin: 3px;
-    padding: 3px;
-}
-
-.descripcion{
-    display: flex;
-    margin-top: 10px;
-    font-weight: bold ;
-   /* border: yellow solid 8px;*/
-    align-items: center;
-    align-self: center;
-    font-size: 14px;
-    padding: 0 10px 0 6px;
-}
-.radioButton{
-    display: flex;
-    flex-direction: column;
-   /* border: yellow solid 3px;*/
-    align-items: center;
-    align-self: center;
-    font-size: 12px;  
-}
-
-.monto{
-    display: flex;
-    /*border: yellow solid 8px;*/
-    align-items: center;
-  
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-}
-.monto p{
-    
-    font-size: 10px;
-    box-sizing: content-box;
-    
-    width: 100%;
-    padding: 10px;
-    color: rgb(132 7 7);
-    font-style: italic;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 1px;
-    text-decoration:double;
+    width: 15vh;
+    align-self:flex-start;
+    margin:3px;
+    padding: 2px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(240,249,232) ;
+    border: solid 3px beige;
     }
+
+.porComprar img:hover {
+    box-shadow: 10px 10px 10px black;
+}
+hr{
+    margin: 5px 0px 0px 0px;
+    width: 100%;
+    border-color: beige;
+}
+.texto{
+    position: absolute;
+    right: 0;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+.texto p{
+    margin: 3px;
+    font-size: 12px;
+
+}
+.descuento{
+    
+    font-style: oblique;
+    font-size: 5px;
+    align-self: flex-end;
+}
+.descripcion{
+    display:flex;
+     background-color: beige;
+    justify-content: center;
+    margin: 3px;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 2px;
+    color: rgb(8, 8, 8);
+    border: solid 1px  rgb(132 7 7);;
+	}
+
+
 
 .pagoTotal{
+   
     display: flex;
-    /*border: solid violet 5px;*/
-    justify-content: flex-end;
-    }
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+   /*border: solid violet 5px;*/
+    align-items: flex-end;
+    margin-right: 10px;
+    
+   
+}
 .textTotal{
-    margin-right: 5px;
-    font-weight: bold;
+    display: flex;
+    padding: 0;
+    margin: 1px;
+    font-weight:400;
     }
 .montoTotal{
-    color:  rgb(132 7 7);
+    font-weight: 400;
+    display: flex;
+    color:  rgb(22, 22, 22);
     text-decoration: double;
-    font-weight: bold;
+    font-weight:400;
+    padding: 0;
+    margin: 1px;
+   
 }
 
 .botonPago{
     background-color: #646464;
     border: none;
-    margin-left: 10px;
-    font-size: 1em;
+     font-size: 1em;
     color: #ffffff;
     padding: 10px;
     border-radius: 10px;
-    transition: all 450ms;
+    transition: background-color 450ms;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
-    align-self: center;
+    margin: 3px 0px 0px ;
 }
 .botonPago:hover {
-    background-color: rgb(6, 141, 62);
+    background-color:  rgb(132 7 7);
 }
 
-.actionCart ul{
-    display: flex;
-    list-style: none;
-    justify-content:center; 
-    text-decoration: none;
-    padding: 10px;
+.actionCart {
+    position: absolute;
+    right: 10px;
+    top: 98px;
+    color:  rgb(132 7 7);
     font-size: 12px;
-        }
-
-    .actionCart ul li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 10px;
+}
+.actionCart a{
+    color:  rgb(132 7 7); 
+    margin-left: 5px;
     }
-    .actionCart ul li i{
-        display: flex;
-        font-size: 20px;
-        color: rgb(6, 141, 62);
-    } 
+
+
 /****** cartForm**********/
 
 .pasajeros{
@@ -221,6 +230,7 @@ section h2{
     justify-items: flex-start;
     flex-wrap: wrap;
     flex-direction: column;
+    
 }
 
 h4{
@@ -237,7 +247,7 @@ h4{
     display: flex;
     max-width: max-content;
     flex-direction: row;    
-    margin: 5px;
+    margin: 5 px;
 }
 .cantidadPasajeros label  {
      /* border: solid black 3px;*/
@@ -324,6 +334,7 @@ h4{
     font-style: italic;
     
      }
+    
 
     .bottonForm{
         display: flex;
@@ -332,6 +343,21 @@ h4{
         justify-content: center;
         margin: 5px;
         }
+    .botonForm{
+        background-color: #646464;
+        border: none;
+         font-size: 1em;
+        color: #ffffff;
+        padding: 10px;
+        border-radius: 10px;
+        transition: background-color 450ms;
+        display: flex;
+        justify-content: flex-end;
+        margin: 3px;
+    }
+    .botonForm:hover {
+        background-color:  rgb(132 7 7);
+    }
 
  /* Footer  */
 
@@ -488,108 +514,74 @@ h4{
     .navCenter li:hover {
         background-color:rgb(195, 236, 158);      
     }
-    /*CART FORM*/
-  
-    
-    .listaCompra{
-       position: relative;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        margin-left: 20px;
-
-       /* border: solid black 5px;*/
-    }
+   
     .porComprar{
+        position: relative;
+        left: 20%;
         display: flex;
-        /*border: solid rgb(255, 0, 174) 5px;*/
-        width: 80%;
-        flex-direction:row;
-        justify-content: center;
-        background-color: rgb(240,249,232) ;
-        border: solid 8px beige;
-    }
-    .descripcion{
+        flex-direction: column;
+        padding: 8x;
+        max-width:50vw;
+        }
+   
+    .porComprar a{
+        position: relative;
+        top: -30px;
         display: flex;
-        font-size: 8px;
-        align-self:center;
-       /* border: solid red 5px;*/
-        font-size: 15px;
-        text-align:center;
-        padding: 0;
-        margin: 0;
-        font-weight: 300;
-        width: 50%;
-      }
-    .monto{
-        align-self: flex-start;
-        /*border: solid blue 5px;*/
-        width: 50%;
-        align-self: center;
-    }
-    .monto p{
-        padding: 0;
-    }
-    
-    .montoTotal{
-        color:  rgb(132 7 7);
-        text-decoration: double;
-        font-weight: bold;
-        font-size: 15px;
-         }
+        justify-content: flex-end;
+        margin-right: 5px;
+        font-size: 12px;
+        }
 
+    .descripcion{
+        padding: 8px;
+        font-size: 14px;
+    }
+    .porComprar i{
+         color:rgb(132 7 7);
+        font-size: 14px;
+        padding: 2px;
+    }
+    .porComprar img{
+        display: flex;
+        width: 30vh;
+        margin: 2px 10px 
+        
+        }
+     main section h2{
+         position: relative;
+     }
+    .texto{
+        top: 150px;
+      
+        }
     .pagoTotal{
-        position: absolute;
-        width: 20%;
-       /* border: solid green 5px;*/
-        top: 15px;
-        right: 30px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        background-color: rgb(240,249,232) ;
-        border: solid 8px beige;
-    }
-    
-    .actionCart{
-        display: flex;
-        width: 20%;
-        /*border: solid orange 5px;*/
         flex-direction: row;
-        text-align: center;
         justify-content: center;
-        margin:5px;
+        align-items: center;
+         font-weight: 300;
+       
+        
+        }
+ 
+    .botonPago{
+        position: absolute;
+        right: 30px;
+        top: 300px;
+       padding: 20px 50px;
+        margin-left: 20px;
+    }
+
+    
+    .actionCart {
+         top: 105px;
+         font-size: 8px;
+         font-size: 14px;
        }
-    
-    .actionCart ul li{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: center;
-        justify-content: center;
-        margin: 5px;;
-        padding: 0;
-        font-size: 10px;
+    .actionCart i{
+        margin-left: 5px;
     }
-    .actionCart  ul li i{
-        flex-direction: column;
-        display: flex;
-        font-size: 10px;
-        color: rgb(6, 141, 62);
-        
-    } 
     
-    .radioButton{
-        display: flex;
-        flex-direction: column;
-        /*border: yellow solid 3px;*/
-        align-items: center;
-        align-self: center;
-        font-size: 12px;  
-        
-    }
         /* Footer */
     
     .header_footer .left_header_menu {
@@ -734,32 +726,45 @@ h4{
     .navCart{
         max-width: 1200px;
     }
-    .listaCompra{
-        display: flex;
-        justify-content: flex-start;
-        margin-left: 50px;
-        margin-top: 10px;
-     }   
+    
      
     .pagoTotal{
     right: 100px;
 
     }
     .porComprar{
-        width: 100%;
-        justify-content:space-between;
-       }
-       main{
+        left: 20px;
+        }
+  
+    
+     main{
         display: flex;
          flex-direction: column;
          justify-content:center;
        
         }
     .pasajeros{
-        margin: 10px;
+        margin: 20px;
     }
        
   .pago{
-      margin: 10px;
+      margin: 20px;
+   
+      
   }
-}
+ .botonPago{
+     right: 300px;
+ }
+   bottonForm{
+       border: #646464 saddlebrown 3px;
+       flex-direction: column;
+   }
+ .botonForm{
+     justify-content: flex-start;
+     padding: 20px;
+     justify-content: space-around;
+   }  
+    
+  }
+  
+

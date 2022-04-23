@@ -37,46 +37,59 @@
             </nav>   
     </header>
     
-    <main class="listaCompra">
+    <main >
         <section>
                <h2>Carrito</h2>
             <article class="porComprar">
+                <p class="descripcion"><strong>Bariloche</strong></p> 
+                    <form action="reset">
+                        <a href="#eliminar">
+                         <button type="reset"><i class="fa-solid fa-trash-can"></i></button>
+                        </a>
+                    </form>
+          
                 <img src="/images/Bariloche300x200.webp" alt="Foto Bariloche">
             
-                <div class="descripcion">
-                      Bariloche todos los circuitos
+                <div class="texto">
+                    <p class="precio"> $40.000</p>
+                    <p class="descuento"> 20% off </p>  
+                    
                 </div>
-                <div class="monto">
-                    <p> 20% OFF </p>
-                    <strong > $40.000 </strong>
-                       
-                </div>
-                
-                <div class="actionCart">
-                    <ul >
-                        <li><a href="./index"> 
-                            <i class="fa-solid fa-cart-shopping"></i></a>
-                            <p>Seguir comprando</p>
-                        </li>
-                        <li> <a href="#eliminar">
-                            <i class="fa-solid fa-trash-can"></i></a>
-                             <p>Eliminar</p>
-                        </li>
-                    </ul>
-            
-                </div>
+                <hr>
             </article>
             
+            <article class="porComprar">
+               
+                <p class="descripcion"><strong>Mendoza</strong></p> 
+                <div>
+                    <form action="reset">
+                        <a href="#eliminar">
+                         <button type="reset"><i class="fa-solid fa-trash-can"></i></button>
+                        </a>
+                    </form>
+                <img src="/images/Mendoza.webp" alt="Foto Bariloche">
+                </div>
+            
+                <div class="texto">
+                    <p class="precio"> $36.770</p>
+                    <p class="descuento">10% off </p>  
+                </div>
                 
+                <hr>
+                
+            </article>
+            <div>
                 <form class="pagoTotal" action="cartForm"  method="get" id="form_pago">   
-                    <p class="textTotal">Total:</p>
-                    <p class="montoTotal"><strong>$40.000</p></strong>
+                    <label class="textTotal">Total:</label>
+                    <label class="montoTotal">$76.770</label>
                     
-               <a href="./cartForm"> <button class="botonPago" type="submit" value="sumbit" form="form_pago">Pagar</button></a>
-                </form>
-            
-            
-        </section>
+                        <a href="./cartForm"> <button class="botonPago" type="submit" value="sumbit" form="form_pago">Pagar</button></a>
+                        
+                    <label class="actionCart"><a href="./index">Seguir comprando<i class="fa-solid fa-cart-shopping"></i></a></label>
+               </form>
+            </div>
+               
+            </section>
     </main>
         
             <footer class="index_footer">
