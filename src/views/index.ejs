@@ -7,92 +7,41 @@
         
         <section class="paquetes">
             <h3>Paquetes:</h3>
-            <div class="productos">  
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                            <img src="/images/Buenos_aires.webp" alt="Buenos_Aires">
-                        </a>  
-                    </figure>
-                    <p class="descripcion"><strong>Buenos Aires en 5 días</strong></p>    
-                    <p class="precio">Precio: $25.000</p>
-                    <p class="descuento">Oportunidad: 40% OFF</p>
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/Mendoza.webp" alt="Mendoza">
-                        </a>
-                    </figure class="product_image">
-                    <p class="descripcion"><strong>Visite la ciudad de Mendoza</strong></p>    
-                    <p class="precio">Precio: $36.770</p>
-                    <p class="descuento">Oportunidad: 10% OFF</p>  
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/Bariloche300x200.webp" alt="Bariloche">
-                        </a>
-                    </figure class="product_image">
-                    <p class="descripcion"><strong>Bariloche todos los circuitos</strong></p>    
-                    <p class="precio">Precio: $40.000</p>
-                    <p class="descuento">Oportunidad: 20% OFF</p>  
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/Calafate300x200.webp" alt="Calafate">
-                        </a>
-                    </figure>
-                    <p class="descripcion"><strong>Calafate y Glaciar Perito Moreno</strong></p>    
-                    <p class="precio">Precio: $52.000</p>
-                    <p class="descuento">Oportunidad: 30% OFF</p>  
-                </article>
+            <div class="productos">
+                <% for (let paquete of data_paquetes) {
+                    if (paquete.index) { %>
+                        <article>
+                            <figure class="product_image">
+                                <a href="/productDetail">
+                                    <img src= <%= paquete.image %> alt= <%= paquete.alt_image%>
+                                </a>  
+                            </figure>
+                            <p class="descripcion"><strong><%= paquete.description%></strong></p>    
+                            <p class="precio">Precio: <%= paquete.price%></p>
+                            <p class="descuento">Oportunidad: <%= paquete.discount%> OFF</p>
+                        </article>
+                    <% } %>
+                <% } %>
+                
             </div> 
         </section>
         <section class="ofertas">
             <h3>Ofertas:</h3>
             <div class="prod_ofertas"> 
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/FinDelMundo300x200.webp" alt="Fin_del_Mundo">
-                        </a>
-                    </figure>
-                    <p class="descripcion"><strong>Fin del Mundo 7 días</strong></p>    
-                    <p class="precio">Precio: $85.000</p>
-                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/Iguazu300x200.webp" alt="Iguazú">
-                        </a>
-                    </figure>
-                    <p class="descripcion"><strong>Iguazú 4 días - Cataratas lado Argentino y Brasilero</strong></p>    
-                    <p class="precio">Precio: $50.000</p>
-                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/Ushuaia300x200.webp" alt="Ushuaia">
-                        </a>
-                    </figure>
-                    <p class="descripcion"><strong>Ushuaia 3 noches</strong></p>    
-                    <p class="precio">Precio: $40.000</p>
-                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
-                </article>
-                <article>
-                    <figure class="product_image">
-                        <a href="/productDetail">
-                        <img src="/images/SanRafael300x200.webp" alt="San_Rafael">
-                        </a>
-                    </figure>
-                    <p class="descripcion"><strong>San Rafael 4 días</strong></p>    
-                    <p class="precio">Precio: $35.000</p>
-                    <p class="descuento">Oportunidad: 50% OFF y 12 cuotas</p>  
-                </article>
+                <% for (let paquete of data_paquetes) {
+                    if (paquete.index == false) { %>
+                        <article>
+                            <figure class="product_image">
+                                <a href="/productDetail">
+                                    <img src= <%= paquete.image %> alt= <%= paquete.alt_image%>
+                                </a>  
+                            </figure>
+                            <p class="descripcion"><strong><%= paquete.description%></strong></p>    
+                            <p class="precio">Precio: <%= paquete.price%></p>
+                            <p class="descuento">Oportunidad: <%= paquete.discount%> OFF</p>
+                        </article>
+                    <% } %>
+                <% } %>
             </div>
         </section>
         <footer class="index_footer">

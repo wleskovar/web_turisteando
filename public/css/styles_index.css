@@ -9,6 +9,7 @@ body {
 /* Header */
 .index_header {
     background-color: beige;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -29,6 +30,15 @@ body {
 .ul_1 li {
     margin: 5px 8px;
     list-style-type: none;
+}
+.ul_1 a:visited {
+    color: green;
+}
+.ul_1 a:link {
+    color: gray;
+}
+.ul_1 a:hover {
+    color: blue;
 }
 
 /* Menu hamburguesa para desplegar en Smartphone las opciones de Home - Paquetes - Ofertas - Contacto */

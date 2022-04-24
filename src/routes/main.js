@@ -1,15 +1,16 @@
 const path = require('path');
-
 const express= require('express');
 const router= express.Router();
 
+const paquetes_controllers = require('../controllers/paquetes_controller.js');
+
+/* rutas con controladores */
+router.get('/', paquetes_controllers.index_home);
+router.get('/index', paquetes_controllers.index_home);
+
+
+
 /* rutas */
-router.get('/', (req, res) => {
-    res.render(path.join(__dirname, '../views/index'));
-});
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index.html'));
-});
 router.get('/packages', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/packages.html'));
 });
