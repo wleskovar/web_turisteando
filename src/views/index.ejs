@@ -9,7 +9,7 @@
             <div class="productos">
                 <% for (let paquete of data_paquetes) {
                     if (paquete.index) { %>
-                        <%- include('./partials/paquetes', {paquete:paquete}) %>
+                        <%- include('./partials/paquetes', {paquete}) %>
                     <% } %>
                 <% } %>
                 
@@ -19,8 +19,8 @@
             <h3>Ofertas:</h3>
             <div class="prod_ofertas"> 
                 <% for (let paquete of data_paquetes) {
-                    if (paquete.index == false) { %>
-                        <%- include('./partials/paquetes') %>
+                    if (paquete.index== false) { %>
+                        <%- include('./partials/paquetes', {paquete}) %>
                     <% } %>
                 <% } %>
             </div>
