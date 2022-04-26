@@ -1,6 +1,5 @@
 
     <%- include('./partials/head') %>
-
     <body>
         <%- include('./partials/header') %>
         <%- include('./partials/main') %>
@@ -10,16 +9,7 @@
             <div class="productos">
                 <% for (let paquete of data_paquetes) {
                     if (paquete.index) { %>
-                        <article>
-                            <figure class="product_image">
-                                <a href="/productDetail">
-                                    <img src= <%= paquete.image %> alt= <%= paquete.alt_image%>
-                                </a>  
-                            </figure>
-                            <p class="descripcion"><strong><%= paquete.description%></strong></p>    
-                            <p class="precio">Precio: <%= paquete.price%></p>
-                            <p class="descuento">Oportunidad: <%= paquete.discount%> OFF</p>
-                        </article>
+                        <%- include('./partials/paquetes', {paquete:paquete}) %>
                     <% } %>
                 <% } %>
                 
@@ -30,16 +20,7 @@
             <div class="prod_ofertas"> 
                 <% for (let paquete of data_paquetes) {
                     if (paquete.index == false) { %>
-                        <article>
-                            <figure class="product_image">
-                                <a href="/productDetail">
-                                    <img src= <%= paquete.image %> alt= <%= paquete.alt_image%>
-                                </a>  
-                            </figure>
-                            <p class="descripcion"><strong><%= paquete.description%></strong></p>    
-                            <p class="precio">Precio: <%= paquete.price%></p>
-                            <p class="descuento">Oportunidad: <%= paquete.discount%> OFF</p>
-                        </article>
+                        <%- include('./partials/paquetes') %>
                     <% } %>
                 <% } %>
             </div>
