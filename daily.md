@@ -1,3 +1,4 @@
+Sprint 3
 Daily
 21/04/22
 
@@ -22,6 +23,51 @@ esta manera llegar con una propuesta a la próxima daily sobre cuál de estos el
 juntando en este la fecha de la próxima reunión.
 
 	Próxima Daily: 24/04/22 18:30 hs.	
+
+Daily 
+24/04/22
+
+	Walter Leskovar se encargara de implementar el motor de templates y de la página de creación y edición de productos en formato.ejs.
+	Por otro lado, de los componentes repetidos, se encargara del Head y Header.
+
+	Facundo Minuto, agregara la carpeta partial dentro de la carpeta views, y separará el footer.
+
+	Ignacio Parisi, investigara como implementar el menu hamburguer.
+
+	Silvana Acotto, revisara cuestiones vinculadas a los distintos archivos css.
+
+
+sprint 4
+04/05/22
+
+	Leimos y analizamos la consigna del sprint 4.
+
+	Dividimos las tareas:
+
+	Walter Leskovar se encargara de planificar el tablero de tareas en Trello.
+	Definirá los campos necesarios para los productos y  el archivo products.json dentro de la carpeta data.
+	CRUD de productos en el Index y en el Admin de productos.
+	
+	Facundo Minuto recorrera el sitio web completo y revisara si hay algo por corregir que haya quedado pendiente.
+	CRUD de productos en Paquetes y Ofertas.
+
+	Ignacio Parisi redactara el archivo retro.md.
+	Creara el archivo admin_users para manejar los usuarios.
+	CRUD de Admin_users
+	
+	Silvana Acotto tomara nota de los temas desarrollados en cada Daily.
+	Definirá los campos necesarios para los usuarios y creará el archivo users.json dentro de la carpeta data.
+
+	CRUD del carrito de compras
+
+
+
+
+
+	Próxima Daily: 08/04/22 18 hs.	
+
+
+
 
 
 	

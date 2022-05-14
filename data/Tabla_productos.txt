@@ -1,0 +1,17 @@
+DB_packages
+.package_id: numerico
+.package_name: string - nombre interno que le da al paquete
+.package_image: string - imagen jpg, pgn, web, que se utilizara para promocionar el paquete
+.package_alt_image: string - descripcion de la imagen para cuando no se cargue
+.package_price: numerico - precio de venta del paquete
+.package_title: string - es el titulo del paquete para los clientes
+.package_q_days: numerico - son la cantidad de noches del viaje
+.package_hotel: string - Nombre del hotel
+.package_stars_hotel: numerico - cantidad de estrellas del Hotel
+.package_description: string - descripcion del paquete
+.package_date_admission: date - fecha de ingreso al hotel
+.package_index: boolean - true o false si va en la vidriera del home
+.package_category: numerico - 1-paquete regular, 2-paquete en oferta
+.package_transportation: numerico - 1-aereo, 2-bus, 3-sin transporte incluido
+.package_excursions_id: numerico - 0 - indica que no tiene excursiones incluidas en el paquete
+.package_discount: numerico - porcentaje de descuento en el precio del paquete.

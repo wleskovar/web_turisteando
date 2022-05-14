@@ -9,7 +9,6 @@ body {
 /* Header */
 .index_header {
     background-color: beige;
-    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,15 +29,6 @@ body {
 .ul_1 li {
     margin: 5px 8px;
     list-style-type: none;
-}
-.ul_1 a:visited {
-    color: green;
-}
-.ul_1 a:link {
-    color: gray;
-}
-.ul_1 a:hover {
-    color: blue;
 }
 
 /* Menu hamburguesa para desplegar en Smartphone las opciones de Home - Paquetes - Ofertas - Contacto */
@@ -171,6 +161,7 @@ body {
 }
 
 /* Footer */
+
 .index_footer {
     /*border: dotted 2px red;*/
     margin: 10px 0;
@@ -196,13 +187,13 @@ body {
 }
 .index_footer .logo {
     /*border: dotted 2px rgb(119, 0, 255);*/
-    max-width: 90px;
+   max-width: 90px;
     max-height: 36px;
 
 }
 .body_footer {
     /*border: dotted 2px blue;*/
-    margin-top: 4px;
+   margin-top: 4px;
     margin-bottom: 4px;
     display:  flex;
     flex-direction: column;
@@ -278,6 +269,103 @@ body {
     flex-direction: column;
 }
 
+/*=====================================================================================================*/
+/* paquete_admin.ejs y productos_admin.ejs                                                             */
+.productos_admin {
+    /*border: double 2px black;*/
+    display: flex;
+    flex-direction: column;
+}
+.productos_admin article {
+    margin: 3px;
+    padding: 3px;
+    border: solid 8px white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: white;
+    /* max-width: 338px;
+    max-height: 327.6px;*/
+}
+.productos_admin article figure {
+    align-self: flex-start;
+    padding: 0 5px 0 5px;
+}
+.productos_admin article p {
+    align-self: flex-start;
+    margin: 0 0 4px 0;
+    padding: 0 6px 0 6px;
+}
+.item_producto_admin {
+    /*border: dotted 2px red;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.item_producto_admin .seccion_campos_admin .campos_admin{
+    text-align: left;
+}
+/* Menu con los Iconos de Loguin - Registro - Carrito de compra */
+.nav_menu_admin {
+    /*border: dotted 2px rgb(115, 0, 255); */
+    margin: 0;
+    align-self: flex-end;    
+}
+.ul_2_admin {
+    /*border: dotted 2px rgb(255, 0, 0);*/
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row; 
+}
+.ul_2_admin li {
+    /*border: dotted 2px rgb(0, 255, 47);*/
+    margin: 5px 8px;
+    list-style-type: none;
+}
+.ul_2_admin li img {
+    width: 25px;
+    height: 25px;
+}
+.ul_2_admin li:hover img {
+    width: 32.5px;
+    height: 32.5px;
+}
+.menu_crear_admin{
+    /*border: dotted 2px red;*/
+    display: flex;
+    flex-direction: row; 
+    align-items: flex-start;
+
+}
+.menu_crear_admin p {
+    font-size: larger;
+}
+.crear_admin {
+    /*border: dotted 2px red;*/ 
+    padding: 0 6px 0 6px;
+    width: 50px;
+    height: 50px;
+}
+.crear_admin:hover {
+    width: 65px;
+    height: 65px;
+}
+.volver_admin {
+    /*border: dotted 2px red; */
+    padding: 0 6px 0 6px;
+    width: 35px;
+    height: 35px;
+}
+.volver_admin:hover {
+    width: 45.5px;
+    height: 45.5px;
+}
+
+
+/*======================================================================================================*/
+
 /* Media cueri para adaptar el diseño a los diferentes dispositivos */
 @media (min-width: 768px) {
     /* Header */
@@ -315,6 +403,7 @@ body {
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+        min-height: auto;     /*probando corregir error de espacio en el main index*/
     }
     .form_main {
         display: flex;
@@ -430,3 +519,46 @@ body {
         margin-right: 15px;   
     }   
 }
+
+/* ============================================================================== */
+/* Formato para el formulario de alta de paquetes */
+.create_form {
+    padding: 20px 15px;
+    background-color: #ebebeb;
+    margin-bottom: 10px;
+}
+.control_formulario {
+    margin-bottom: 15px;
+    padding: 15px;
+}
+.control_formulario_perfil {
+    margin-bottom: 15px;
+    padding: 15px;
+    font-style: italic;
+    font-weight: bolder;
+}
+.control_formulario label {
+    margin-bottom: 5px;
+    font-style: italic;
+    font-weight: bolder;
+    display: block;
+}
+.control {
+    width: 90%;
+    padding: 8px;
+}
+.boton_formulario {
+    background-color: #39b54a;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    
+}
+.boton_formulario:hover {
+    background-color: #03540e;
+}
+
+/* ================================================================================================================ */
+

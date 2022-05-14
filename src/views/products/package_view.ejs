@@ -1,0 +1,105 @@
+<!-- Datos a cargar en el formulario para el alta de un paquete
+ DB_packages
+.package_id: numerico
+.package_name: string - nombre interno que le da al paquete
+.package_image: string - imagen jpg, pgn, web, que se utilizara para promocionar el paquete
+.package_alt_image: string - descripcion de la imagen para cuando no se cargue
+.package_price: numerico - precio de venta del paquete
+.package_title: string - es el titulo del paquete para los clientes
+.package_q_days: numerico - son la cantidad de noches del viaje
+.package_hotel: string - Nombre del hotel
+.package_stars_hotel: numerico - cantidad de estrellas del Hotel
+.package_description: string - descripcion del paquete
+.package_date_admission: date - fecha de ingreso al hotel
+.package_index: boolean - true o false si va en la vidriera del home
+.package_category: numerico - 1-paquete regular, 2-paquete en oferta
+.package_transportation: numerico - 1-aereo, 2-bus, 3-sin transporte incluido
+.package_excursions_id: numerico - 0 - indica que no tiene excursiones incluidas en el paquete
+.package_discount: numerico - porcentaje de descuento en el precio del paquete.
+==================================================================================================
+-->
+
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <!-- Search paquete -->
+    <form action="/admin/producto/delete?_method=DELETE" method="POST" class="create_form" id= 'form_delte' enctype="multipart/form-data">
+        <label for="paquetes">Paquetes turísticos: </label>
+            <select name="paquetes">
+                <option value="bariloche">Bariloche</option>
+                <option value="buenos_aires">Buenos Aires</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="iguazu">Iguazú</option>
+                <option value="fin_mundo">Fin del Mundo</option>
+            </select>
+        <button type="submit">Buscar</button>
+    </form>
+    <!-- Formulario -->
+    <form action="/index" method="GET" class="create_form">
+        <h3>Formulario para crear un paquete turistico</h3>
+        <div class="control_formulario">
+            <label>package_id: </label>
+            <p><%= package.package_id %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_name: </label>
+            <p><%= package.package_name %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_image: </label>
+            <p><%= package.package_image %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_alt_image: </label>
+            <p><%= package.package_alt_image %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_price: </label>
+            <p><%= package.package_price %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_title: </label>
+            <p><%= package.package_title %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_q_days: </label>
+            <p><%= package.package_q_days %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_hotel: </label>
+            <p><%= package.package_hotel %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_stars_hotel: </label>
+            <p><%= package.package_stars_hotel %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_description: </label>
+            <p><%= package.package_description %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_date_admission: </label>
+            <p><%= package.package_date_admission %> </p>
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_index">package_index: </label>
+            <p><%= package.package_index %> </p>
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_category">package_category: </label>
+            <p><%= package.package_category %> </p>
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_transportation">package_transportation: </label>
+            <p><%= package.package_transportation %> </p>
+        </div>
+        <div class="control_formulario">
+            <label>package_excursions_id: </label>
+            <p><%= package.package_excursions_id %> </p>
+        </div>                                                                       
+        <button type= "submit" class="boton_formulario">Home</button>
+        
+    </form>
+    <%- include('../partials/footer') %>
+</body>
+</html>

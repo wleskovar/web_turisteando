@@ -1,0 +1,56 @@
+<%- include('./partials/head') %>
+<body>
+  <!-- Navbar (sit on top) -->
+  <%- include('./partials/nav_admin') %>
+  
+  
+  <!-- Header -->
+  <%- include('./partials/header_admin') %>
+  
+
+    <!-- Page content -->
+    <div class="ps-content">
+      <!-- Help Section -->
+      <div class="ps-row ps-padding-64" id="help">
+        <div class="ps-col m6 ps-padding-large ps-hide-small">
+          <img
+            src='/images/Bariloche300x200.webp'
+            class="ps-round ps-image ps-opacity-min"
+            alt="Vistas de Argentina"
+            width="600"
+            height="750"
+          />
+        </div>
+
+        <div class="ps-col m6 ps-padding-large">
+          <h1 class="ps-center">Pagina para la administración del sitio web de Turisteando</h1>
+          <br />
+          <p>Dentro de esta página podrá: listar, crear, modifica y borrar paquetes
+            turisticos y lo mismo para el caso de los usuarios del sitio. Para operar el sistema debe ser un usuario
+            debidamente entrenado, ya que su operatoria modifica el funcionamiento del sitio.
+            Recuerde consultar el manual de operaciones que dispone en linea si tienen alguna duda
+            o requiere de entrenamiento.
+          </p>
+          <hr>
+        </div>
+      </div>
+
+      <hr />
+      <!-- Menu Section -->
+      <div class="ps-row ps-padding-64" id="menu">
+        <div class="ps-col l6 ps-padding-large">
+          <h1 class="ps-center">Menu para administración</h1>
+            <h4><a href="#">Administración de usuarios</a></h4>
+            <h4><a href="/admin/productos">Administración de los productos</a></h4>
+            <p class="ps-text-grey">
+              Los cambios realizados modifican la base de datos
+              y el funcionamiento del sitio web.
+            </p>
+            <br />            
+        </div>
+      </div>
+      <!-- Footer -->
+      <%- include('./partials/footer_admin') %>
+    </div>
+  </body>
+</html>

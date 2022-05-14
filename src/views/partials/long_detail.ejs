@@ -1,0 +1,12 @@
+<article class="long_detail">
+    <figure>
+        <img src="/images/<%= paquete.package_image ? paquete.package_image : "default.png" %>">
+    </figure>
+    <div class="long_description">
+        <p class="description"><strong> <%= paquete.package_description %> </strong></p>
+        <p class="price"><strong>ARS <%= paquete.package_price %> </strong></p>
+        <p class="discount"><strong>Oportunidad: <%= paquete.package_discount %>% OFF</strong></p>
+        <p class="package_detail"> <%= paquete.package_long_description %> </p>
+        <a class="link" href="/productDetail/<%= paquete.package_id %>" name="id">Más detalles...</a>
+    </div>
+</article>

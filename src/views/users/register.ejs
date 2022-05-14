@@ -1,0 +1,45 @@
+    <%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+        
+        <main class="background">
+            <section class="container_register">
+                <div class="register_form">
+                    <form action="" method="POST">
+                        <h3>Registrate</h3>
+                        <div>
+                            <div class="input_register">
+                                <input type="text" name="usuario" class="input_box" placeholder="Usuario" required maxlength="40">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_register">
+                                <input type="email" name="email" class="input_box" placeholder="Email" required maxlength="40">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_register">
+                                <input type="password" name="password" class="input_box" placeholder="Contraseña" required maxlength="40">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input_register">
+                                <input type="password" name="password" class="input_box" placeholder="Confirmar contraseña" required maxlength="40">
+                            </div>
+                        </div>
+                        <div>
+                            <button type="submit" class="button_signup">
+                                <span>Registrate</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>    
+        </main>
+
+        <%- include('../partials/footer') %>
+
+    </body>
+</html>

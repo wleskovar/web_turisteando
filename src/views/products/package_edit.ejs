@@ -1,0 +1,121 @@
+<!-- Datos a cargar en el formulario para el alta de un paquete
+ DB_packages
+.package_id: numerico
+.package_name: string - nombre interno que le da al paquete
+.package_image: string - imagen jpg, pgn, web, que se utilizara para promocionar el paquete
+.package_alt_image: string - descripcion de la imagen para cuando no se cargue
+.package_price: numerico - precio de venta del paquete
+.package_title: string - es el titulo del paquete para los clientes
+.package_q_days: numerico - son la cantidad de noches del viaje
+.package_hotel: string - Nombre del hotel
+.package_stars_hotel: numerico - cantidad de estrellas del Hotel
+.package_description: string - descripcion del paquete
+.package_date_admission: date - fecha de ingreso al hotel
+.package_index: boolean - true o false si va en la vidriera del home
+.package_category: numerico - 1-paquete regular, 2-paquete en oferta
+.package_transportation: numerico - 1-aereo, 2-bus, 3-sin transporte incluido
+.package_excursions_id: numerico - 0 - indica que no tiene excursiones incluidas en el paquete
+.package_discount: numerico - porcentaje de descuento en el precio del paquete.
+==================================================================================================
+-->
+
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header_admin') %>
+    <!-- Formulario -->
+    <% if(package) { %>
+    <form action="/admin/producto/edit?_method=PUT" method="POST" class="create_form" id= 'form_edit' enctype="multipart/form-data">
+        <input id='id' name="package_id" value="<%= package.package_id%>" hidden >
+        <h3>Formulario para modificar un paquete turistico</h3>
+        <div class="control_formulario">
+            <label>package_id: <%= package.package_id%></label>
+        </div>
+        <div class="control_formulario">
+            <label>package_name: </label>
+            <input type="text" name="package_name" class="control" value="<%= package.package_name%>"
+                    maxlength="32" size="32">
+        </div>
+        <div class="control_formulario">
+            <label>package_image: <%= package.package_image%></label>
+            <input type="file" name="turisteando_image" id="turisteando_image" accept= ".jpeg, .png, .webp" class="control">
+        </div>
+        <div class="control_formulario">
+            <label>package_alt_image: </label>
+            <input type="text" name="package_alt_image" class="control" value="<%= package.package_alt_image%>"
+                    maxlength="32" size="32">
+        </div>
+        <div class="control_formulario">
+            <label>package_price: </label>
+            <input type="number" name="package_price" class="control" value="<%= package.package_price%>"
+                    minlength="4" maxlength="10" size="10">
+        </div>
+        <div class="control_formulario">
+            <label>package_title: </label>
+            <input type="text" name="package_title" class="control" value="<%= package.package_title%>"
+                    maxlength="32" size="32">
+        </div>
+        <div class="control_formulario">
+            <label>package_q_days: </label>
+            <input type="number" name="package_q_days" class="control" value="<%= package.package_q_days%>"
+                    minlength="1" maxlength="2" size="17">
+        </div>
+        <div class="control_formulario">
+            <label>package_hotel: </label>
+            <input type="text" name="package_hotel" class="control" value="<%= package.package_hotel%>"
+                    maxlength="32" size="32">
+        </div>
+        <div class="control_formulario">
+            <label>package_stars_hotel: </label>
+            <input type="number" name="package_stars_hotel" class="control" value="<%= package.package_stars_hotel%>"
+                    minlength="1" maxlength="1" size="15">
+        </div>
+        <div class="control_formulario">
+            <label>package_description: </label>
+            <textarea name="package_description" class="control" form= 'form_edit' rows="2">
+                    <%= package.package_description%>
+            </textarea>
+        </div>
+        <div class="control_formulario">
+            <label>package_date_admission: </label>
+            <input type="date" name="package_date_admission" class="control" value="<%= package.package_date_admission%>">
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_index">package_index: </label>
+            <label>SI <input type="radio" name="package_index" <%= package.package_index == 'true' ? 'checked' : ''%> 
+                                value='true' ></label>
+            <label>NO <input type="radio" name="package_index" <%= package.package_index == 'false' ? 'checked' : ''%>
+                                 value='false'></label>
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_category">package_category: </label>
+            <label>paquete regular <input type="radio" name="package_category" <%= package.package_category == '1' ? 'checked' : ''%>
+                                        value='1'></label>
+            <label>paquete en oferta <input type="radio" name="package_category" <%= package.package_category == '2' ? 'checked' : ''%>
+                                        value='2'></label>
+        </div>
+        <div class="control_formulario_perfil">
+            <label for="package_transportation">package_transportation: </label>
+            <label>aéreo <input type="radio" name="package_transportation" <%= package.package_transportation == '1' ? 'checked' : ''%>
+                value= '1'></label>
+            <label>omnibus <input type="radio" name="package_transportation" <%= package.package_transportation == '2' ? 'checked' : ''%>
+                value='2'></label>
+            <label>sin transporte incluido <input type="radio" name="package_transportation" <%= package.package_transportation == '3' ? 'checked' : ''%>
+                value='3'></label>
+        </div>
+        <div class="control_formulario">
+            <label>package_excursions_id: </label>
+            <input type="number" name="package_excursions_id" class="control" value="<%= package.package_excursions_id%>"
+                    minlength="1" maxlength="2" size="18">
+        </div>
+        <div class="control_formulario">
+            <label>package_discount: </label>
+            <input type="number" name="package_discount" class="control" value="<%= package.package_discount%>"
+                    required maxlength="10" size="10">
+        </div>                                                                       
+        <button type= "submit" class="boton_formulario">Guardar</button>
+        <button type="reset" class="boton_formulario"><a href="/admin/productos">Cancelar</a></button>
+    </form>
+    <% } %>
+    <%- include('../partials/footer_admin') %>
+</body>
+</html>

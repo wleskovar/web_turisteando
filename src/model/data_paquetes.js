@@ -1,10 +1,11 @@
-const data_paquetes= [
+const data_paquetes = [
     {
         id: 1,
         index: true,
         image: '/images/Buenos_aires.webp',
         alt_image: 'Buenos_Aires',
         description:'Buenos Aires en 5 días',
+        long_description: '5 días maravillosos en la ciudad capital de Argentina',
         price: '$25.000',
         discount: '40%',
     },
@@ -14,6 +15,7 @@ const data_paquetes= [
         image: '/images/Mendoza.webp',
         alt_image: 'Mendoza',
         description:'Mendoza en 4 días',
+        long_description: 'Visite una de las ciudades más lindas de Argentina, conozca la industria del vino, recorriendo el camino del vino',
         price: '$18.000',
         discount: '20%',
     },
@@ -22,8 +24,9 @@ const data_paquetes= [
         index: true,
         image: '/images/Bariloche300x200.webp',
         alt_image: 'Bariloche',
-        description:'Buenos Aires en 7 días',
+        description:'Bariloche en 7 días',
         price: '$80.000',
+        long_description: '7 días en los que podrá conocer una de los lugares más lindos del sur de Argentina y del mundo, Bariloche',
         discount: '15%',
     },
     {
@@ -33,6 +36,7 @@ const data_paquetes= [
         alt_image: 'Calafate',
         description:'Calafate en 3 días',
         price: '$50.000',
+        long_description: 'Conozca el Calafate, el único punto de acceso al Glaciar Perito Moreno, declarado Patrimonio de la Humanidad, y el cerro Fitz Roy',
         discount: '10%',
     },
     {
@@ -42,6 +46,7 @@ const data_paquetes= [
         alt_image: 'Fin del Mundo',
         description:'Fin del Mundo en 6 días',
         price: '$75.000',
+        long_description: 'En Ushuaia, la experiencia de recorrer el Fin del Mundo en 6 días. Una aventura única y maravillosa',
         discount: '45%',
     },
     {
@@ -51,6 +56,7 @@ const data_paquetes= [
         alt_image: 'Iguazu',
         description:'Iguazus en 3 días',
         price: '$28.000',
+        long_description: '3 días en cataratas del Iguazu, vistas desde Argentina y Brasil',
         discount: '50%',
     },
     {
@@ -60,18 +66,20 @@ const data_paquetes= [
         alt_image: 'Ushuaia',
         description:'Ushuaia Aires en 7 días',
         price: '$85.000',
+        long_description: 'En Ushuaia, la experiencia de recorrer el Fin del Mundo en 6 días. Una aventura única y maravillosa',
         discount: '40%',
     },
     {
         id: 8,
         index: false,
         image: '/images/SanRafael300x200.webp',
-        alt_image: 'San Rafel',
-        description:'San Rafel en 5 días',
+        alt_image: 'San Rafael',
+        description:'San Rafael en 5 días',
         price: '$45.000',
+        long_description: 'Visite San Rafael, conozca la industria del vino, recorriendo el camino del vino',
         discount: '40%',
     },
     
 ];
 
-module.exports= data_paquetes;
+module.exports = data_paquetes;

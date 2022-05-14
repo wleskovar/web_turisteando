@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+
+    <body>
+
+        <%- include('./partials/header') %>
+
+        <main>
+            <section class="deals">
+                <h2 class="sheet_title">Ofertas</h2>
+                <div class="products">
+                    <section class="paquetes">
+                        <div class="products">
+                            <% for (let paquete of data_deals) { %>
+                                <%- include('./partials/short_detail', {paquete}) %>
+                                <%- include('./partials/long_detail', {paquete}) %>
+                            <% } %>
+                        </div> 
+                    </section>
+                </div>     
+            </section>
+        </main>
+
+        <%- include('./partials/footer') %>
+        
+    </body>
+</html>

@@ -1,5 +1,6 @@
 
     <%- include('./partials/head') %>
+
     <body>
         <%- include('./partials/header') %>
         <%- include('./partials/main') %>
@@ -7,57 +8,21 @@
         <section class="paquetes">
             <h3>Paquetes:</h3>
             <div class="productos">
-                <% for (let paquete of data_paquetes) {
-                    if (paquete.index) { %>
-                        <%- include('./partials/paquetes', {paquete}) %>
-                    <% } %>
-                <% } %>
-                
+                <% for (let paquete of index_paquetes) {%>
+                        <%- include('./partials/paquete', {paquete}) %>
+                <% } %>  
             </div> 
         </section>
         <section class="ofertas">
             <h3>Ofertas:</h3>
             <div class="prod_ofertas"> 
-                <% for (let paquete of data_paquetes) {
-                    if (paquete.index== false) { %>
-                        <%- include('./partials/paquetes', {paquete}) %>
-                    <% } %>
+                <% for (let paquete of index_ofertas) {%>
+                        <%- include('./partials/paquete', {paquete}) %>
                 <% } %>
             </div>
         </section>
-        <footer class="index_footer">
-            <div class="header_footer">
-                <a href="#" class="hamburguer-button">
-                    <img src="/images/bars-solid.svg" alt="hamburguer" >
-                </a>
-                <img class= "logo" src="/images/logo_turisteando.png" alt="Logo Turisteando">         
-                <nav class="menu_footer">
-                    <ul class="left_header_menu"> 
-                        <li><a href="/index">Home</a></li>
-                        <li><a href="/packages">Paquetes</a></li>
-                        <li><a href="/deals">Ofertas</a></li>
-                        <li><a href="/contacto">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="body_footer">
-                <form class= "form_footer" action="/subscripcion" method="post" id="form_footer">
-                    <label for="email">Recibí nuestras ofertas:</label>
-                    <input type="email" name="email" id="email" required placeholder="correo electrónico">
-                </form>
-                <button class= "button_footer" type="submit" form="form_footer" value="Submit">Quiero las ofertas!</button>
-            </div>
-            <div class="iconos_sociales">
-                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/facebook-square-brands.svg" width="106px" height="122px"alt="Seguinos en Facebook"></a>
-                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/instagram-brands.svg" width="106px" height="122px"alt="Seguinos en Instagram"></a>
-                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/whatsapp-square-brands.svg" width="106px" height="122px"alt="Seguinos en WhatsApp"></a>
-                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/twitter-brands.svg" width="106px" height="122px"alt="Seguinos en Twitter"></a>
-                <a href="URL DE LA RED SOCIAL" target="_blank"><img src="/images/youtube-brands.svg" width="106px" height="122px"alt="Seguinos en YouTube"></a>
-            </div>
 
-
-            
-    </footer>
+        <%- include('./partials/footer') %>
            
     </body>
 

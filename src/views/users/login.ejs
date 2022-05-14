@@ -1,0 +1,47 @@
+
+    <%- include('../partials/head') %>
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+        <main class="background">
+            <div class="titulo">
+                <h2>¡Comenzá a elegir tu viaje hoy!</h2>
+            </div>
+            <section class="container_login">
+                <div class="login_form">
+                    <form action="" method="">
+                        <h3>Iniciar Sesión</h3>
+                        <div>
+                            <div class="input">
+                                <input type="email" name="email" class="input_box" placeholder="Email" required maxlength="40">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="input">
+                                <input type="password" name="password" class="input_box" placeholder="Contraseña" required maxlength="40">
+                            </div>
+                        </div>
+                        <div class="forgot_password">
+                            <button type="button" class="forgot_password_button">
+                                <a href="#">¿Olvidaste tu contraseña?</a>
+                            </button>
+                        </div>
+                        <div>
+                            <button type="submit" class="button_login">
+                                <span class="login">Ingresar</span>
+                            </button>
+                        </div>
+                        <div>
+                           <p>¿No estás registrado? <a href="./register"> Registrate aqui</a></p>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <%- include('../partials/footer') %>
+
+    </body>
+</html>
