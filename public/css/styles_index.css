@@ -8,11 +8,13 @@ body {
 
 /* Header */
 .index_header {
+    /*border: dotted 2px red;*/
     background-color: beige;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    position:relative;
 }
 
 /* loto de Turisteando */
@@ -30,30 +32,114 @@ body {
     margin: 5px 8px;
     list-style-type: none;
 }
+/*==============================================================*/
+/*==============================================================*/
+/*==============================================================*/
 
 /* Menu hamburguesa para desplegar en Smartphone las opciones de Home - Paquetes - Ofertas - Contacto */
-.hamburguer-button {
-    /*border: dotted 2px black;*/
+
+
+.main-nav_hamburguer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 30vh;
+    width: 35%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 100;
+}
+  
+.main-nav_hamburguer.show{
+    margin-left: 0;
+}
+  
+.nav-links_hamburguer {
+
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+  
+.link-item_hamburguer {
+    margin-top: 2rem;
+    margin-left: 1rem;
+    color: #444444;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    
+}
+
+.link-item_hamburguer::after {
+    position: absolute;
+    content: "";
+    background-color: black;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: 0.3s ease all;
+}
+  
+.link-item_hamburguer:hover::after {
+    width: 100%;
+}
+
+.button-menu_hamburgue {
+    margin-left: 2px;
+    margin-top: 2px;
+    z-index: 50;
     width: 15px;
     height: 15px;
-    margin: 0;
-    align-self: flex-start;  
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
+.button-menu_hamburgue_close {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 12px;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    z-index: 100;
+}
+.button-menu_hamburgue_close.show {
+    margin-left: 2px;
+    margin-top: 0;
+}
+
+/*==============================================================*/
+/*==============================================================*/
+/*==============================================================*/
+
+
 
 /* Menu con los Iconos de Loguin - Registro - Carrito de compra */
 .nav_menu2 {
-    /*border: dotted 2px rgb(115, 0, 255); */
+    /*border: dotted 2px rgb(115, 0, 255);*/ 
     margin: 0;
     align-self: flex-end;    
 }
 .ul_2 {
-    /*border: dotted 2px rgb(255, 0, 0);*/
+    /* border: dotted 2px rgb(255, 0, 0); */
     margin-bottom: 0;
     display: flex;
     flex-direction: row; 
 }
 .ul_2 li {
-    /*border: dotted 2px rgb(0, 255, 47);*/
+    /* border: dotted 2px rgb(0, 255, 47); */
     margin: 5px 8px;
     list-style-type: none;
 }
@@ -369,7 +455,7 @@ body {
 /* Media cueri para adaptar el diseño a los diferentes dispositivos */
 @media (min-width: 768px) {
     /* Header */
-    .hamburguer-button {
+    .button-menu_hamburgue {
         display: none;
     }
     .index_header {

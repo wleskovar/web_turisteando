@@ -44,7 +44,7 @@ app.use((req, res, next) => {
 });
 
 /* se monta el servidor */
-app.listen(process.env.PORT || 5020, () => {
-    console.log('Servidor corriendo en el puerto 5020');
+app.listen(process.env.PORT || 3000, () => {
+    console.log('Servidor corriendo en el puerto 3000');
 });
 
