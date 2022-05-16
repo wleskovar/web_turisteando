@@ -14,6 +14,12 @@ const products_controller = {
         let package = engine.read_columm('productos', package_id); 
         res.status(200).render('../views/productDetail', { package: package[0] });
     },
+    show_select: (req, res) => {
+        let paquete = req.query.paquete;
+        let package = engine.read_columm('productos', paquete); 
+        res.send('walter');
+        //res.status(200).render('../views/productDetail', { package: package[0] });
+    },
     post_product: (req, res) => {
         let data_package = req.body.id;
         engine.add_columm('productos', data_package);

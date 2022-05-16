@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const methodOverride= require('method-override')
+const session= require('express-session');
 const app = express();
 const publicPath = path.join(__dirname, '../public');
 
@@ -9,6 +10,7 @@ const rutasMain = require('./routes/main.js');
 const rutasPackages = require('./routes/packages.js');
 const rutasDeals = require('./routes/deals.js');
 const rutasProducts = require('./routes/products.js');
+const rutasSelect = require('./routes/select.js');
 const rutasCart = require('./routes/cart.js');
 const rutasAdmin = require('./routes/admin.js');
 const rutasLogin = require('./routes/login.js');
@@ -25,6 +27,7 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
+app.use(session({secret: 'Turisteando'}));
 
 /* puntos de entrada */
 app.use('/', rutasMain);
@@ -33,6 +36,7 @@ app.use('/login', rutasLogin);
 app.use('/packages', rutasPackages);
 app.use('/deals', rutasDeals);
 app.use('/productDetail', rutasProducts);
+app.use('/productSelect', rutasSelect);
 app.use('/cart', rutasCart);
 app.use('/admin', rutasAdmin);
 app.use('/register', rutasRegister);

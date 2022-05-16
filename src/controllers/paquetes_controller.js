@@ -11,9 +11,8 @@ const paquetes_controllers = {
         let lista_paquetes= engine.browse_table('productos');
         let lista_index= lista_paquetes.filter((elemento) => elemento.package_index == 'true')
         let index_paquetes= lista_index.filter((elemento) => elemento.package_category == 1)
-
         let index_ofertas= lista_index.filter((elemento) => elemento.package_category == 2)
-        res.render('../views/index', {index_paquetes: index_paquetes, index_ofertas: index_ofertas});
+        res.render('../views/index', {index_paquetes: index_paquetes, index_ofertas: index_ofertas, selector_paquetes: lista_paquetes});
     }
 };
 
