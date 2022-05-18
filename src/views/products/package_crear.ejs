@@ -22,88 +22,176 @@
 <%- include('../partials/head') %>
 <body>
     <%- include('../partials/header_admin') %>
+
     <!-- Formulario -->
     <form action="/admin/crear" method="POST" class="create_form" enctype="multipart/form-data" id="form_crear">
         <h3>Formulario para crear un paquete turistico</h3>
         <div class="control_formulario">
             <label>package_id: </label>
-            <input type="number" name="package_id" class="control" placeholder="codigo paquete"
-                    required minlength="1" maxlength="4" size="13">
+            <input type="number" name="package_id" class="control <%= locals.errors && errors.package_id ? 'is_invalid' : null %>"
+                value="<%= locals.old_data ? old_data.package_id : null %>"
+                placeholder="codigo paquete" minlength="1" maxlength="4" size="13">
+                <% if (locals.errors && errors.package_id) { %>
+                    <div class="text_error">
+                        <%= errors.package_id.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_name: </label>
-            <input type="text" name="package_name" class="control" placeholder="nombre del paquete"
-                    required maxlength="32" size="32">
-        </div>
+            <input type="text" name="package_name" class="control <%= locals.errors && errors.package_name ? 'is_invalid' : null %>"
+                value="<%= locals.old_data ? old_data.package_name : null %>"
+                placeholder="nombre del paquete" maxlength="32" size="32">
+                <% if (locals.errors && errors.package_name) { %>
+                    <div class="text_error">
+                        <%= errors.package_name.msg %> 
+                    </div> 
+                <% } %>
+            </div>
         <div class="control_formulario">
             <label>package_image: </label>
-            <input type="file" name="turisteando_image" id="turisteando_image" accept= ".jpeg, .png, .webp" class="control">
+            <input type="file" name="turisteando_image" id="turisteando_image" accept= ".jpeg, .png, .webp" 
+                    class="control" value="<%= locals.old_data ? old_data.turisteando_image : null %>">
+                <% if (locals.errors && errors.turisteando_image) { %>
+                    <div class="text_error">
+                        <%= errors.turisteando_image.msg %> 
+                    </div> 
+                <% } %>
+                
         </div>
         <div class="control_formulario">
             <label>package_alt_image: </label>
-            <input type="text" name="package_alt_image" class="control" placeholder="descrpción alternativa de la imagen"
-                    required maxlength="32" size="32">
+            <input type="text" name="package_alt_image" class="control <%= locals.errors && errors.package_alt_image ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_alt_image : null %>" 
+                    placeholder="descrpción alternativa de la imagen" size="32">
+                <% if (locals.errors && errors.package_alt_image) { %>
+                    <div class="text_error">
+                        <%= errors.package_alt_image.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_price: </label>
-            <input type="number" name="package_price" class="control" placeholder="precio"
-                    required minlength="4" maxlength="10" size="10">
+            <input type="number" name="package_price" class="control <%= locals.errors && errors.package_price ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_price : null %>" 
+                    placeholder="precio" maxlength="10" size="10">
+                <% if (locals.errors && errors.package_price) { %>
+                    <div class="text_error">
+                        <%= errors.package_price.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_title: </label>
-            <input type="text" name="package_title" class="control" placeholder="titulo para la agencia"
-                    required maxlength="32" size="32">
+            <input type="text" name="package_title" class="control <%= locals.errors && errors.package_title ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_title : null %>" 
+                    placeholder="titulo para la agencia" size="32">
+                <% if (locals.errors && errors.package_title) { %>
+                    <div class="text_error">
+                        <%= errors.package_title.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_q_days: </label>
-            <input type="number" name="package_q_days" class="control" placeholder="cantidad de días"
-                    required minlength="1" maxlength="2" size="17">
+            <input type="number" name="package_q_days" class="control <%= locals.errors && errors.package_q_days ? 'is_invalid' : null %>" 
+                    value="<%= locals.old_data ? old_data.package_q_days : null %>" 
+                    placeholder="cantidad de días" minlength="1" size="17">
+                <% if (locals.errors && errors.package_q_days) { %>
+                    <div class="text_error">
+                        <%= errors.package_q_days.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_hotel: </label>
-            <input type="text" name="package_hotel" class="control" placeholder="nombre del hotel"
-                    required maxlength="32" size="32">
+            <input type="text" name="package_hotel" class="control <%= locals.errors && errors.package_hotel ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_hotel : null %>" 
+                    placeholder="nombre del hotel" size="32">
+                <% if (locals.errors && errors.package_hotel) { %>
+                    <div class="text_error">
+                        <%= errors.package_hotel.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_stars_hotel: </label>
-            <input type="number" name="package_stars_hotel" class="control" placeholder="categoría hotel"
-                    required minlength="1" maxlength="1" size="15">
+            <input type="number" name="package_stars_hotel" class="control <%= locals.errors && errors.package_stars_hotel ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_stars_hotel : null %>" 
+                    placeholder="categoría hotel" size="15">
+                <% if (locals.errors && errors.package_stars_hotel) { %>
+                    <div class="text_error">
+                        <%= errors.package_stars_hotel.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_description: </label>
-            <textarea name="package_description" class="control" form= 'form_crear' rows="2" 
-                        placeholder="Escriba la descripción del paquete">
-            </textarea>
+            <textarea name="package_description" class="control <%= locals.errors && errors.package_description ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_description : null %>"></textarea>
+                <% if (locals.errors && errors.package_description) { %>
+                    <div class="text_error">
+                        <%= errors.package_description.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_date_admission: </label>
-            <input type="date" name="package_date_admission" class="control">
+            <input type="date" name="package_date_admission" 
+                    class="control <%= locals.errors && errors.package_date_admission ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_date_admission : null %>" >
+                <% if (locals.errors && errors.package_date_admission) { %>
+                    <div class="text_error">
+                        <%= errors.package_date_admission.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario_perfil">
             <label for="package_index">package_index: </label>
-            <label>SI <input type="radio" name="package_index" value="true" ></label>
-            <label>NO <input type="radio" name="package_index" value="false" checked></label>
+            <label>SI <input type="radio" name="package_index" value="true" 
+                        <%= locals.old_data && old_data.package_index === "true" ? 'checked' : null %>></label>
+            <label>NO <input type="radio" name="package_index" value="false" 
+                <%= locals.old_data && old_data.package_index === "false" ? 'checked' : locals.old_data ? null : 'checked' %>></label>
         </div>
         <div class="control_formulario_perfil">
             <label for="package_category">package_category: </label>
-            <label>paquete regular <input type="radio" name="package_category" value="1" checked ></label>
-            <label>paquete en oferta <input type="radio" name="package_category" value="2" ></label>
+            <label>paquete regular <input type="radio" name="package_category" value="1"
+                <%= locals.old_data && old_data.package_category === "1" ? 'checked' : locals.old_data ? null : 'checked' %> ></label>
+            <label>paquete en oferta <input type="radio" name="package_category" value="2"
+                <%= locals.old_data && old_data.package_category === "2" ? 'checked' : null %>></label>
         </div>
         <div class="control_formulario_perfil">
             <label for="package_transportation">package_transportation: </label>
-            <label>aéreo <input type="radio" name="package_transportation" value="1" checked ></label>
-            <label>omnibus <input type="radio" name="package_transportation" value="2" ></label>
-            <label>sin transporte incluido <input type="radio" name="package_transportation" value="3" ></label>
+            <label>aéreo <input type="radio" name="package_transportation" value="1" 
+                <%= locals.old_data && old_data.package_transportation === "1" ? 'checked' : locals.old_data ? null : 'checked' %> ></label>
+            <label>omnibus <input type="radio" name="package_transportation" value="2" 
+                <%= locals.old_data && old_data.package_transportation === "2" ? 'checked' : null %>></label>
+            <label>sin transporte incluido <input type="radio" name="package_transportation" value="3" 
+                <%= locals.old_data && old_data.package_transportation === "3" ? 'checked' : null %>></label>
         </div>
         <div class="control_formulario">
             <label>package_excursions_id: </label>
-            <input type="number" name="package_excursions_id" class="control" placeholder="codigo excursiones"
-                    required minlength="1" maxlength="2" size="18">
+            <input type="number" name="package_excursions_id"
+                    class="control <%= locals.errors && errors.package_excursions_id ? 'is_invalid' : null %>" 
+                    value="<%= locals.old_data ? old_data.package_excursions_id : null %>" 
+                    placeholder="codigo excursiones" minlength="1" size="18">
+                <% if (locals.errors && errors.package_excursions_id) { %>
+                    <div class="text_error">
+                        <%= errors.package_excursions_id.msg %> 
+                    </div> 
+                <% } %>
         </div>
         <div class="control_formulario">
             <label>package_discount: </label>
-            <input type="number" name="package_discount" class="control" placeholder="descuento"
-                    required maxlength="10" size="10">
+            <input type="number" name="package_discount" 
+                    class="control <%= locals.errors && errors.package_discount ? 'is_invalid' : null %>"
+                    value="<%= locals.old_data ? old_data.package_discount : null %>" 
+                    placeholder="descuento" maxlength="10" size="10">
+                <% if (locals.errors && errors.package_discount) { %>
+                    <div class="text_error">
+                        <%= errors.package_discount.msg %> 
+                    </div> 
+                <% } %>
         </div>                                                                       
         <button type= "submit" class="boton_formulario">Aceptar</button>
         <button type="reset" class="boton_formulario">Borrar</button>

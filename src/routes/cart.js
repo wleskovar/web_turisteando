@@ -18,7 +18,7 @@ router.get("/add/:id", cart_controller.add_item);
 
 
 //eliminar un paquete/
-router.get("/delete", cart_controller.delete_item);
+router.post("/delete/:id", cart_controller.delete_item);
 
 //comprar//
 router.get("/purchase", cart_controller.purchase);

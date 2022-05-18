@@ -11,12 +11,17 @@
                     
             
                     <article <%= paquete.package_id %> class="porComprar">
-                        <p class="descripcionCart"><%= paquete.package_name %> </p> 
-                        <figure><img src="/images/<%= paquete.package_image %>" alt="<%= paquete.package_alt_image %>"></figure>
+                        <p class="descripcionCart"><%= paquete.package_name %> 
+                            <form action="/cart/delete/<%= paquete.package_id %>" method= "post">
+                                <button  class="remove" type="submit" name="button_reset" ><i class="fa-solid fa-trash-can"></i></button></a>
+                            </form>  
+                        </p>
+                        
+                        <figure class="img_cart"><img src="/images/<%= paquete.package_image %>" alt="<%= paquete.package_alt_image %>"></figure>
                         <div class="texto">
                             <p class="desc"> <%= paquete.package_title %> </p>
-                            <p class="precioCart"> <%= paquete.package_price %></p>
-                            <p class="descuentoCart"> <%= paquete.package_price %> off </p>  
+                            <p class="precioCart">$ <%= paquete.package_price %></p>
+                            <p class="descuentoCart"> <%= paquete.package_discount %> off </p>  
                         </div>
                         <% } %>
                         <br>
@@ -37,9 +42,6 @@
                             <div class="action_cart">
                             
                                 <form action="cart/cartForm" method="get">
-                                    <a href="#eliminar" for="button_reset">
-                                    <button class="remove" type="reset" name="button_reset" id="button_reset"><i class="fa-solid fa-trash-can"></i></button></a>
-                    
                                     <a href="cart/cartForm" for="start_buy"> 
                                     <button class="botonPago" type="submit" value="sumbit" name="start_buy" id="start_buy">Iniciar compra</button></a>
                                 </form>

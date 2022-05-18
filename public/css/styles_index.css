@@ -6,6 +6,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.text_error {
+    font-size: medium;
+    color: red;
+}
+.is_invalid {
+    background-color: rgb(244, 142, 159);
+    border-color: #800000;
+    border-width: 3px;
+}
+
 /* Header */
 .index_header {
     /*border: dotted 2px red;*/

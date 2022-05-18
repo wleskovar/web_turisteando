@@ -103,19 +103,12 @@ main section .h2Cart{
     background-color:  #ebebeb;
     
         }
-.porComprar a{
-    position: relative;
-    top: -25px;
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-    font-size: 12px;
-    text-decoration: none;
 
-
-}
 .porComprar i{
     color:rgb(132 7 7);
+
+  
+
 
 }
 .porComprar img{
@@ -161,15 +154,16 @@ align-content: flex-end;
     align-self: flex-end;
 }
 .descripcionCart{
-    display:flex;
+  
      background-color: beige;
-    justify-content: center;
+    text-align: center;
     margin: 3px;
     font-weight: 300;
     font-size: 12px;
     padding: 2px;
     color: rgb(8, 8, 8);
-    border: solid 1px  rgb(132 7 7);;
+    border: solid 1px  rgb(132 7 7);
+
 	}
 
 
@@ -196,31 +190,45 @@ align-content: flex-end;
     margin-top: 10px;
     }
 .montoTotal{
-    font-weight: 400;
-    display: flex;
-    color:  rgb(22, 22, 22);
-    text-decoration: double;
-    font-weight:400;
-    padding: 0;
-    margin: 1px;
-    justify-content: center;
-    font-size: 20px;
+    margin: 0px;
 }
-.iniciar_compra a{
-    text-decoration: none;
+.start_buy{
     position: relative;
-    top: -40px;
 }
-.iniciar_compra{
-    margin-top: 20px;
+.action_cart{
+    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+   }
+a{
+    text-decoration: none;
 }
+.keep_buy{
+    font-size: 12px;
+    color:rgb(132 7 7);
+    font-weight: 400px;
+    text-decoration: none;
+}
+.remove{
+    display:inline-flex;
+    font-size: 12px;
+    color:rgb(132 7 7);
+ 
+    align-self: center;
+    }
+
+
 
 .botonPago{
     background-color:#39b54a;
     border: none;
-     font-size: 1em;
+     font-size: 14px;
     color: #ffffff;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
     transition: background-color 450ms;
     display: flex;
@@ -228,25 +236,6 @@ align-content: flex-end;
     
     margin: 3px 0px 0px ;
     }
-
-
-
-.actionCart {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    color:  rgb(10, 10, 10);
-    font-size: 14px;
-    
-}
-.actionCart a{
-    position: relative;
-    color:  rgb(14, 14, 14); 
-  top: 170px;
-  margin-right: 0px;
-  
-    }
-
 
 /****** cartForm**********/
 
@@ -549,35 +538,19 @@ h4{
     .navCenter li:hover {
         background-color:rgb(195, 236, 158);      
     }
-   
-   
-    .porComprar a{
-      
-        top: -40px;
-      right: 20px;
-        justify-content: flex-end;
-        margin-right: 5px;
-        font-size: 18px;
-        }
-
     .descripcionCart{
         padding: 8px;
         font-size: 20px;
     }
-    .porComprar a img{
-         color:rgb(132 7 7);
-        font-size: 14px;
-        padding: 2px;
-    }
+ 
     .porComprar img{
         display: flex;
         width: 30vh;
         margin: 2px 10px 
         
         }
-    .iniciar_compra a{
-        top: -50px;
-    
+    .remove{
+        font-size: 18px;
     }
      main section .h2Cart{
          position: relative;
@@ -589,7 +562,6 @@ h4{
      }
     .sectionCart{
         width: 100%;
-        
     }
     .texto{
         top: 100px;
@@ -601,39 +573,20 @@ h4{
        .texto p {
            font-size: 20px;
        }
-    .pagoTotal{
-      
-        justify-content: center;
-        align-items: center;
-         font-weight: 300;
-         font-size: 24px;
-       
-        
-        }
+    .keep_buy{
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
  
     .botonPago{
         display: inline-block;
         right: 50px;
         bottom: 5px;
-       padding: 10px 30px;
+       padding: 5px 20px;
        margin: 0px;
-       font-size: 28px;
+       font-size: 20px;
     }
-     .actionCart {
-        
-         top: 300px;
-         right: 50px;
-         font-size: 8px;
-         font-size: 18px;
-         
-       }
-    .actionCart i{
-        margin-left: 5px;
-    }
-    .actionCart a{
-       text-decoration: none;
-     
-    }
+    
         /* Footer */
     
     .header_footer .left_header_menu {
@@ -731,39 +684,45 @@ h4{
          font-size: 24px;
          font-weight: 600;
      }
-    .pagoTotal{
-    right: 100px;
 
-    }
-   .actionCart{
-       margin-top: 10px;
-       margin-right: -20px;
-   }
-    .porComprar a{
-        right: 20px;
-        top:-40px;
-          }
-          .porComprar i{
-              font-size: 24px;
-          }
-    .porComprar img{
-        position: relative;
-        top: -20px;
-        left: 20px;
-     
-    }
     .texto p{
         font-size: 24px;
         font-weight: 500;
+    }
+    .remove{
+        font-size: 
+        20px;
     }
      .cartMain{
      
          flex-direction: column;
          justify-content:center;
          margin: 0;
-       
-       
-        }
+       }
+    .start_buy{
+        display:flex;
+       margin-top: 10px;
+      justify-content: center;
+    }
+
+    .montoTotal{
+        margin-top: 5px;
+        font-size: 20px;
+    }
+    .action_cart{
+        display: inline-flex;
+        flex-direction: row-reverse;
+    }
+    .textTotal{
+        margin: 0px;
+        margin-top: 5px;
+        margin-right:5px;
+    }
+    .keep_buy{
+        margin-right: 40px ;
+        color: black;
+        font-size: 20px;
+    }
     .pasajeros{
       
     min-width: none;
@@ -829,7 +788,9 @@ font-size: 16px;
    
       }
  .botonPago{
-     right: 300px;
+     padding: 10px 40px;
+    
+    
  }
   
  .botonForm{

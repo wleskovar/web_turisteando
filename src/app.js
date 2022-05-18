@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const methodOverride= require('method-override')
-const session= require('express-session');
 const app = express();
 const publicPath = path.join(__dirname, '../public');
 
@@ -10,12 +9,12 @@ const rutasMain = require('./routes/main.js');
 const rutasPackages = require('./routes/packages.js');
 const rutasDeals = require('./routes/deals.js');
 const rutasProducts = require('./routes/products.js');
-const rutasSelect = require('./routes/select.js');
 const rutasCart = require('./routes/cart.js');
 const rutasAdmin = require('./routes/admin.js');
-const rutasLogin = require('./routes/login.js');
-const rutasRegister = require('./routes/register.js');
 const rutasContact = require('./routes/contact.js');
+const rutasUsers = require('./routes/users.js');
+const rutasNewsletter = require('./routes/newsletter.js')
+const rutasSelect = require('./routes/select.js');
 
 app.set('view engine', 'ejs');
 /* seteo donde esta el directorio "views" */
@@ -27,28 +26,27 @@ app.use(express.static(publicPath));
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(methodOverride('_method'));
-app.use(session({secret: 'Turisteando'}));
 
 /* puntos de entrada */
 app.use('/', rutasMain);
 app.use('/index', rutasMain);
-app.use('/login', rutasLogin);
 app.use('/packages', rutasPackages);
 app.use('/deals', rutasDeals);
 app.use('/productDetail', rutasProducts);
-app.use('/productSelect', rutasSelect);
 app.use('/cart', rutasCart);
 app.use('/admin', rutasAdmin);
-app.use('/register', rutasRegister);
 app.use('/contact', rutasContact);
+app.use('/users', rutasUsers);
+app.use('/newsletter', rutasNewsletter);
+app.use('/productSelect', rutasSelect);
 
 /* Error 404 */
-app.use((req, res, next) => {
-    res.status(404).render('notFound');
-});
+// app.use((req, res, next) => {
+//     res.status(404).render('notFound');
+// });
 
 /* se monta el servidor */
-app.listen(process.env.PORT || 3000, () => {
-    console.log('Servidor corriendo en el puerto 3000');
+app.listen(process.env.PORT || 5020, () => {
+    console.log('Servidor corriendo en el puerto 5020');
 });
 
