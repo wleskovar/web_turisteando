@@ -1,7 +1,18 @@
 <nav class="nav_menu2">
-    <ul class="ul_2">
-        <li><a href="/users/login"><img src="/images/user-solid.svg" alt="Login" ></a></li>
-        <li><a href="/users/register"><img src="/images/user-plus-solid.svg" alt="registro" ></a></li>
-        <li><a href="/cart"><img src="/images/cart-shopping-solid.svg" alt="carrito" ></a></li>
-    </ul>
+    <% if (locals.is_logged) { %>
+        <div class="nav_menu_log">
+            <a href="/users/profile" class="nav_profile">
+                <img src="/images/users/avatars/<%= locals.user_logged.avatar %>">
+                <%= locals.user_logged.user %>
+            </a>
+            <a href="/users/logout" class="nav_logout">| Logout</a>    
+            <a href="/cart" class="nav_cart"><img src="/images/cart-shopping-solid.svg" alt="carrito"></a>  
+        </div>
+    <% } else { %>
+        <ul class="ul_2">
+            <li><a href="/users/login"><img src="/images/user-solid.svg" alt="Login" ></a></li>
+            <li><a href="/users/register"><img src="/images/user-plus-solid.svg" alt="registro" ></a></li>
+            <li><a href="/cart"><img src="/images/cart-shopping-solid.svg" alt="carrito" ></a></li>
+        </ul>
+    <% } %>
 </nav>

@@ -1,30 +1,42 @@
-<<<<<<< HEAD:users-prueba.json
-[{"nombre":"ignacio","email":"ignacio@gmail.com","password":"ignacio","password_valid":"ignacio"},{"nombre":"walter","email":"walter@gmail.com","password":"walterlesk","password_valid":"walterlesk"},{"nombre":"facundo","email":"facundo@gmail.com","password":"fminuto","password_valid":"fminuto"},{"nombre":"silvana","email":"silvana@gmail.com","password":"silvana","password_valid":"silvana"},{"nombre":"silvana","email":"silacotto@gmail.com","password":"1234","password_valid":"1234"}]z
-=======
 [
     {
-        "nombre": "ignacio",
+        "id": 1,
+        "user": "Ignacio",
         "email": "ignacio@gmail.com",
-        "password": "ignacio",
-        "password_valid": "ignacio"
+        "password": "$2a$10$lGotBeBK0nNtldquPdZdRuQKG7cyD1l6ICKz034kks3htbUyXFcAO",
+        "password_valid": "$2a$10$8JHXeL2Dky0EDe/gm1/9t.7LdTZN62dfyAx6.0XpBINrJDRQlAyO6",
+        "avatar": "1653846615007_img.png"
     },
     {
-        "nombre": "walter",
-        "email": "walter@gmail.com",
-        "password": "walter",
-        "password_valid": "walter"
+        "id": 2,
+        "user": "silvana",
+        "email": "sil@gmail.com",
+        "password": "$2a$10$zw4Ttcbe/65Fi1WLwrPDCei09unTPmzEPVbrW/90T2AhJ60q2oim.",
+        "password_valid": "$2a$10$hQnBEuZ3mu3eH8hlUdirOuGULakXrbPAcHP2IlTHS7upWmQrubsJi",
+        "avatar": "1654647688401_img.png"
     },
     {
-        "nombre": "facundo",
-        "email": "facundo@gmail.com",
-        "password": "faucndo",
-        "password_valid": "facudno"
+        "id": 3,
+        "user": "Felipe",
+        "email": "feli@gmail.com",
+        "password": "$2a$10$JmFRNWbhOHwa4.NOAl83Fu3eBqCRw6ORdA9/1.WexN/JrgzTdnk/2",
+        "password_valid": "$2a$10$OEaPeUgkS0jZ8EXZ3oNgc.w1RMgLfQWnU3P4nJx/tLpEPsEWixAnq",
+        "avatar": "1654648053784_img.png"
     },
-    {
-        "nombre": "silvana",
-        "email": "silvana@gmail.com",
-        "password": "silvana",
-        "password_valid": "silvana"
+   
+         {
+        "id": 4,
+        "user": "Benjamin",
+        "email": "benja@gmaiil.com",
+        "password": "$2a$10$yXJ4AKZki9TLzPnf8FpLMeifEHeoBMTWYP/WZ7D53ztE4yq1odv2m",
+        "password_valid": "$2a$10$AKvVDQZckBhhoQ78tfMkSuE51wB38u/ZBYjt/9GsP6HPfKy5kiWki",
+        "avatar": "1654655568095_img.jpg"
+    }, {
+        "id": 5,
+        "user": "Nachito",
+        "email": "nacho@gmail.com",
+        "password": "$2a$10$f6f4EjhIQOvp7WB3EKtcEOMmgx6V5W6UVGtw8huIdceHI9GLMUiTW",
+        "password_valid": "$2a$10$wj/ln8wrHwQXauhC2Oo0Ru8biGvHrhBE2v9ANaaSeZV43S2NmBsgS",
+        "avatar": "1654656427432_img.png"
     }
 ]
->>>>>>> 45cf4955a253b48438572a0bda3954066f14725b:data/users-prueba.json

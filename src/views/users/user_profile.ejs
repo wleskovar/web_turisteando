@@ -1,0 +1,19 @@
+<%- include('../partials/head') %>
+
+<body>
+    <%- include('../partials/header') %>
+
+  <main>
+    <div class="container_user" style="text-align: center;">
+      <h2>¡Hola <%= user.user %>! </h2>
+      <img src="/images/users/avatars/<%= user.avatar %>">
+      <br>
+      <br>
+      <div><%= user.email %></div>
+    </div>
+  </main>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

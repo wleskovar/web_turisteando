@@ -11,29 +11,48 @@
             </div>
             <section class="container_login">
                 <div class="login_form">
-                    <form action="" method="GET">
+                    <form action="/users/login" method="POST">
                         <h3>Iniciar Sesión</h3>
                         <div>
+                            <!-- Email -->
                             <div class="input">
-                                <input type="email" name="email" class="input_box" placeholder="Email" required maxlength="40">
+                                <input type="email" name="email" class="input_box" placeholder="Email" maxlength="40"
+                                value="<%= locals.oldData ? oldData.email : null %>">
+                                <% if (locals.errors && errors.email) { %>
+                                    <div class="text-danger">
+                                        <%= errors.email.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                         </div>
                         <div>
                             <div class="input">
-                                <input type="password" name="password" class="input_box" placeholder="Contraseña" required maxlength="40">
+                                <!-- Password -->
+                                <input type="password" name="password" class="input_box" placeholder="Contraseña" maxlength="40">
+                                <% if (locals.errors && errors.password) { %>
+                                    <div class="text-danger">
+                                        <%= errors.password.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                         </div>
-                        <div class="forgot_password">
+                        <div class="form_check">
+                            <label class="form_check_label">
+                                <input type="checkbox" class="form_check_input" name="remember_user">  Recordar mi usuario
+                            </label>
+                        </div>
+                        <br>
+                        <!-- <div class="forgot_password">
                             <button type="button" class="forgot_password_button">
                                 <a href="#">¿Olvidaste tu contraseña?</a>
                             </button>
-                        </div>
-                        <div>
+                        </div> -->
+                        <div class="form_button_login">
                             <button type="submit" class="button_login">
                                 <span class="login">Ingresar</span>
                             </button>
                         </div>
-                        <div>
+                        <div class="link_register">
                            <p>¿No estás registrado? <a href="./register"> Registrate aqui</a></p>
                         </div>
                     </form>

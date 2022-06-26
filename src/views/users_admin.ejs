@@ -1,21 +1,30 @@
-<%- include('./partials/head') %> 
-<body>
-  <!-- Navbar (sit on top) -->
-  <%- include('./partials/nav_admin') %>
+<%- include('./partials/head') %>
 
-
-  <!-- Header -->
-  <%- include('./partials/header_admin') %>
-
+  <body>
   
-  <h1>Users</h1>
 
-  <!-- Page content -->
-  <div class="ps-content">
+    <%- include('./partials/nav_admin') %>
+    <%- include('./partials/header_admin') %>
+        <h1 class="main_title">Administracion de Usuarios</h1>
 
-    
-    <!-- Footer -->
-    <%- include('./partials/footer_admin') %>
-  </div>
+      
+        <p class="title_users">Listado de Usuarios Registrados</p>
+        <a class="crear_text_admin" href="/admin"><img class= "volver_admin" src="/images/arrow-left-solid.svg" alt="Crear" ></a>
+        <p>Volver al Home Admin</p>
+        
+        <div class="main_users">
+          <br>
+            <%for (let user of users_table) {%>
+                <div  class="users_list">
+                  <a  id="<%= user.id %>" href="/admin/userDetail/<%= user.id %>">
+                    <legend>Nombre: <%= user.user %></legend>
+                    <img  class="user_avatar" src="/images/users/avatars/<%= user.avatar ? user.avatar : "user_avatar_default.png" %>">
+                  </a>
+                  <hr>
+                </div>  
+              <% } %>
+        </div>
+   
+  </header>
 </body>
 </html>

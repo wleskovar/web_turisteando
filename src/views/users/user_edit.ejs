@@ -1,0 +1,134 @@
+
+
+<%- include('../partials/head') %>
+<body class="body_users">
+
+   
+        <h3>Formulario para modificar un Usuario</h3>
+         <% if(user) { %>
+    <form action="/admin/user/edit?_method=PUT" method="POST" class="create_form" id= 'form_edit' enctype="multipart/form-data">
+        
+        <div class="id_edit">
+            <label>Editar usuario <%= user.id%></label>
+        <input id='id' type="number" name="id" value="<%= user.id%>" readonly  hidden >
+      
+        </div>
+        
+        <div class="user_edit">
+            <label>Nombre de ususario:</label>
+            <input type="text" name="user" class="control" value="<%= user.user%>"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>User email:  </label>
+            <input type="email" name="email" class="control" value="<%= user.email%>"  size="10">
+        </div>
+        <div class="user_edit">
+            <label>password:  </label>
+            <input type="password" name="password"  value="<%= user.password%>" class="control" readonly  size="10">
+        </div>
+        <div class="user_edit">
+            <label>password_valid:  </label>
+            <input type="password" name="password_valid"  value="<%= user.password_valid%>" class="control" readonly  size="10">
+        </div>
+        <div class="user_edit">
+            <label><%= user.avatar%></label>
+            <input type="file" name="avatar" class="control" value="<%= user.avatar%>" readonly size="32">
+        </div>
+            <% } %>
+
+        <% if(user2) { %>
+        <div class="user_edit">
+            <label>Nombre: </label>
+            <input type="text" name="first_name" value="<%= user2.first_name%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>Apellido: </label>
+            <input type="text" name="last_name" class="control"  value="<%= user2.last_name%>" size="32">
+        </div>
+        <div class="user_edit">
+            <label>Fecha de Nacimiento: </label>
+            <input type="date" name="birth_date" value="<%= user2.birth_date%>" class="control" size="32">
+        </div>
+        <div class="user_edit">
+            <label>Edad: </label>
+            <input type="number" name="age" value="<%= user2.age%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>N° Documento: </label>
+            <input type="number" name="identity_document" value="<%= user2.identity_document%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>Domicilio: </label>
+            <input type="text" name="home" value="<%= user2.home%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>Código Postal: </label>
+            <input type="number" name="postal_code" value="<%= user2.postal_code%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>Provincia: </label>
+            <input type="text" name="province" value="<%= user2.province%>" class="control"  size="32">
+        </div>
+        <div class="user_edit">
+            <label>Mail alternativo:  </label>
+            <input type="email" name="email_alternative " class="control" value="<%= user2.email%>"  size="10">
+        </div>
+        <div class="user_edit">
+            <label>Numero Contacto:</label>
+            <input type="tel" name="phone_number" value=" <%= user2.phone_number%> " class="control"   size="10">
+        </div>
+        <div class="user_edit">
+            <label>Medio de pago:  </label>
+            <input type="text" name="payment_method" value="<%= user2.payment_method%>" class="control"   size="10">
+        </div>
+        <div class="user_edit">
+            <label>N° de tarjeta:</label>
+            <input type="number" name="card_number" value=" <%= user2.card_number%> " class="control"   size="10">
+        </div>
+        <div class="user_edit">
+            <label>Titular de la Tarjeta:  </label>
+            <input type="text" name="name_card_holder" class="control"  value="<%= user2.name_card_holder%>" size="10">
+        </div>
+        <div class="user_edit">
+            <label>Vencimiento:</label>
+            <input type="number" name="expiration" class="control" value=" <%= user2.expiration%> "  size="10">
+        </div>
+        <div class="user_edit">
+            <label>Código de seguridad:  </label>
+            <input type="number" name="security_code"  value="<%= user2.security_code%>" class="control"   size="10">
+        </div>
+        <% } %>
+        <h1>Compras <%= user.user%> </h1>  
+        <% if(user3) { %>
+    
+        <% for (let i = 0; i < user3.length; i++) { %> 
+            
+            <div class="table_edit">
+                <p class="table_edit_columm"><strong>Orden Compra Nro:          <%= user3[i].order%></strong></p>   
+                <p class="table_edit_columm"><strong>Id Paquete:                <%= user3[i].purchase[i].package_id   %></strong></p>    
+                <p class="table_edit_columm"><strong>Nombre:</strong>           <%= user3[i].purchase[i].package_name %></p>
+                <p class="table_edit_columm"><strong>Precio:</strong>           <%= user3[i].purchase[i].package_price%></p>
+                <p class="table_edit_columm"><strong>Titulo:</strong>           <%= user3[i].purchase[i].package_title%></p>                   
+                <p class="table_edit_columm"><strong>Cantidad de días:</strong> <%= user3[i].purchase[i].package_q_days%></p>
+                <p class="table_edit_columm"><strong>Hotel: </strong>           <%= user3[i].purchase[i].package_hotel %></p>
+                <p class="table_edit_columm"><strong>Estrellas del Hotel:</strong><%= user3[i].purchase[i].package_stars_hotel%></p>
+                <p class="table_edit_columm"><strong>Fecha de admisión:</strong> <%= user3[i].purchase[i].package_date_admission%></p>
+                <p class="table_edit_columm"><strong>Vidriera del Home:</strong> <%= user3[i].purchase[i].package_index== "true"? "SI" : "NO"%></p>
+               
+                <p class="table_edit_columm"><strong> Excursiones:</strong>      <%= user3[i].purchase[i].package_excursions_id%></p>
+                <p class="table_edit_columm"><strong> Descuento: </strong>       <%= user3[i].purchase[i].package_discount%>%</p>
+            </div>
+            <% } %> 
+          
+        <% } %> 
+ 
+            <div class="button_users">                              
+                <button type= "submit" class="button_edit_users">Guardar</button>
+                <button type="reset" class="button_edit_users"><a href="/admin/users">Cancelar</a></button>
+            </div>
+         
+    </form>
+
+    
+</body>
+</html>

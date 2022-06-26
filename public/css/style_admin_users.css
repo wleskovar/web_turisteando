@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #ebebeb;
+}
+.main_title{
+    margin-top: 50px;
+    background-color: #ebebeb;
+}
+.main_users{
+    background-color:#ebebeb;
+}
+.name_users{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.title_users{
+   text-align: center;
+   font-size: 25px;
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 400;
+
+    }
+.users_list{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+     justify-content:flex-start;
+    text-align:start;
+    align-self: flex-start;
+    margin: 10px;
+    padding: 5px;
+    align-items: flex-start;
+}
+.user_avatar{
+    width: 300px;
+    height: 300px;
+}
+/*.user_avatar:hover{
+    background-color: rgb(110, 160, 131);
+    opacity:0.7;
+    border-radius: 50px 54px 50px 50px / 30px 25px 25px 25px;
+    width: 200px;
+    height: 50px;
+}*/
+/*Users Detail*/
+
+.users_list{
+    display: flex;
+    justify-content: center;
+  
+}
+.id_edit{
+    font-size: 16px;
+    font-weight:bolder;
+    font-style: oblique;
+}
+.user_name , .user_id , .user_avatar , .user_email, .iconos{
+     align-self: center;
+}
+
+/*Users edit*/
+
+.user_edit, .user_edit label{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    font-size: 14px;
+    font-style: oblique;
+  font-weight: bold;
+}
+.button_users{
+    display: flex;
+    justify-content: center;
+}
+.button_edit_users{
+     background-color: #39b54a;
+    border: none;
+    font-size: 20px;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 10px;
+    
+}
+.table_edit
+{
+    border: #39b54a solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+.table_edit_columm{
+    display: flex;
+}
+/*Media queris*/
+
+@media (min-width: 770px) {
+.main_users{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+.users_list{
+    border: black solid 1px;
+    flex-direction: row;
+    
+}
+.user_name , .user_id , .user_avatar , .user_email, .iconos{
+    align-self: center;
+    padding: 10px;
+
+}
+.user_edit, .user_edit label{
+    display:inline-block;
+    flex-direction: column;
+ width:max-content;
+    margin: 5px;
+    font-size: 14px;
+    font-style: oblique;
+  font-weight: bold;
+  
+}
+
+.button_users{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+
+}
+
+
+}

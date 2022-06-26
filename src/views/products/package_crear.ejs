@@ -114,21 +114,11 @@
                     </div> 
                 <% } %>
         </div>
-        <div class="control_formulario">
-            <label>package_stars_hotel: </label>
-            <input type="number" name="package_stars_hotel" class="control <%= locals.errors && errors.package_stars_hotel ? 'is_invalid' : null %>"
-                    value="<%= locals.old_data ? old_data.package_stars_hotel : null %>" 
-                    placeholder="categoría hotel" size="15">
-                <% if (locals.errors && errors.package_stars_hotel) { %>
-                    <div class="text_error">
-                        <%= errors.package_stars_hotel.msg %> 
-                    </div> 
-                <% } %>
-        </div>
+        
         <div class="control_formulario">
             <label>package_description: </label>
             <textarea name="package_description" class="control <%= locals.errors && errors.package_description ? 'is_invalid' : null %>"
-                    value="<%= locals.old_data ? old_data.package_description : null %>"></textarea>
+                    ><%= locals.old_data ? old_data.package_description : null %></textarea>
                 <% if (locals.errors && errors.package_description) { %>
                     <div class="text_error">
                         <%= errors.package_description.msg %> 
@@ -148,10 +138,10 @@
         </div>
         <div class="control_formulario_perfil">
             <label for="package_index">package_index: </label>
-            <label>SI <input type="radio" name="package_index" value="true" 
-                        <%= locals.old_data && old_data.package_index === "true" ? 'checked' : null %>></label>
-            <label>NO <input type="radio" name="package_index" value="false" 
-                <%= locals.old_data && old_data.package_index === "false" ? 'checked' : locals.old_data ? null : 'checked' %>></label>
+            <label>SI <input type="radio" name="package_index" value= "1" 
+                        <%= locals.old_data && old_data.package_index == "1" ? 'checked' : null %>></label>
+            <label>NO <input type="radio" name="package_index" value= "2" 
+                <%= locals.old_data && old_data.package_index == "2" ? 'checked' : locals.old_data ? null : 'checked' %>></label>
         </div>
         <div class="control_formulario_perfil">
             <label for="package_category">package_category: </label>

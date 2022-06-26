@@ -238,7 +238,10 @@ a{
     }
 
 /****** cartForm**********/
-
+.errors_form{
+    color: red;
+    font-size: 12px;
+}
 .pasajeros{
      /* border: solid yellow 3px;*/
     display: flex;
@@ -299,6 +302,7 @@ h4{
     /* border: solid brown 3px;*/
     display: flex;
    margin-right: 20px;
+   padding: 10px;
     font-size: 16px;
     font-style: italic;
     width: 90%;
@@ -318,8 +322,9 @@ h4{
 .medioPago{
     font-size: 8;
     display: flex;
-   
-   
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 10px;
   
 }
 
@@ -332,6 +337,7 @@ h4{
 }
 .medioPago label{
     font-size: 16px;
+    
    
 }
 
@@ -340,7 +346,7 @@ h4{
      /* border: solid green 3px;  */
 }
 
-.pagoTarjeta div{
+.pagoTarjeta {
     display: flex;
     margin: 5px;
     flex-direction: column;
@@ -349,6 +355,9 @@ h4{
     margin: 5px;
 
     }
+.radio{
+   width: 20px;
+}
 .pago input{
      /* border: solid brown 3px;*/
     display: flex;
@@ -356,6 +365,7 @@ h4{
     font-size: 16px;
     font-style: italic;
     width: 90%;
+    padding: 10px;
     
      }
     
@@ -586,6 +596,13 @@ h4{
        margin: 0px;
        font-size: 20px;
     }
+    .div_boton_form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        width: 90%;
+    }
     
         /* Footer */
     
@@ -621,6 +638,12 @@ h4{
     }
 
 /*-----CartForm----*/
+
+.this_is_invalid {
+    background-color: rgba(235, 182, 148, 0.477);
+    border-color: #800000;
+  
+}
    .cartMain{
        display: flex;
         flex-direction: row;
@@ -636,10 +659,10 @@ h4{
    
  
     .botonForm{
-            display: inline-block;
+            display: flex;
             font-size: 18px;
             margin-bottom: 10px;
-            padding: 20px;
+            
             justify-content: center;
             
             }
@@ -727,7 +750,7 @@ h4{
       
     min-width: none;
     max-width: none;
-    /*border: solid yellow 3px;*/
+    border: solid yellow 3px;
     display: flex;
     padding: 0;
     margin-top: 10px;
@@ -749,6 +772,7 @@ h4{
     font-size: 18px;
     font-style: italic;
     width: 90%;
+   
     }
   .pago{
     min-width: none;
@@ -772,7 +796,11 @@ h4{
    font-size: 16px;
  
 }
-
+.medioPago{
+    
+    justify-content:flex-start;
+  
+}
 
 .pagoTarjeta div{
 font-size: 16px;

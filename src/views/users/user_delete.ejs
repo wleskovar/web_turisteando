@@ -1,0 +1,27 @@
+
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header_admin') %>
+            <!-- Formulario -->
+        <form action="/admin/user/delete/<%= user.id%>?_method=DELETE" method="POST" class="create_form" 
+                        id= 'form_delete' enctype="multipart/form-data">
+        
+                <h3>Formulario para borrar un Usuarios</h3>
+                    <div class="control_formulario">
+                        <label><strong></strong> Id usuario: <%= user.id%></strong></label>
+                    </div>
+            
+                    <div class="control_formulario">
+                        <label>Editar usuario  <%= user.id%></label>
+                        <label>Nombre:<%= user.user%> </label>
+                        <label>Avatar: <%= user.avatar%></label>
+                        <label>Mail: <%= user.email%> </label>
+                    </div>
+
+                <button type= "submit" class="boton_formulario">Eliminar</button>
+                <button type="reset" class="boton_formulario"><a href="/admin/users">Cancelar</a></button>
+        </form>
+        
+    <%- include('../partials/footer_admin') %>
+</body>
+</html>

@@ -10,11 +10,11 @@
             <p class="campos_admin">Precio: <%= paquete.package_price%></p>
             <p class="campos_admin">Titulo: <%= paquete.package_title%></p>
             <p class="campos_admin">Cantidad de días: <%= paquete.package_q_days%></p>
-            <p class="campos_admin">Hotel: <%= paquete.package_hotel%></p>
-            <p class="campos_admin">Estrellas del Hotel: <%= paquete.package_stars_hotel%></p>
+            <p class="campos_admin">Hotel: <%= paquete.package_hotel%> - <%= paquete.hotel.nombre%></p>
+            <p class="campos_admin">Estrellas del Hotel: <%= paquete.hotel.stars%></p>
             <p class="campos_admin">Descripción: <%= paquete.package_description%></p>
             <p class="campos_admin">Fecha de admisión: <%= paquete.package_date_admission%></p>
-            <p class="campos_admin">Vidriera del Home: <%= paquete.package_index== "true"? "SI" : "NO"%></p>
+            <p class="campos_admin">Vidriera del Home: <%= paquete.package_index== "1"? "SI" : "NO"%></p>
             <p class="campos_admin">Categorias: <%= paquete.package_category== "1" ? "Paquete regular" : "Paquete oferta"%></p>
             <p class="campos_admin">Transporte: <%= paquete.package_transportation== "1" ? "Aereo" : paquete.package_transportation== "2" ? "Bus" : "Sin transporte"%></p>
             <p class="campos_admin">Excursiones: <%= paquete.package_excursions_id%></p>

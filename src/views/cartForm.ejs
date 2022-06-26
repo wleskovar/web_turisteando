@@ -4,16 +4,17 @@
 
     <%- include('./partials/header') %>
 
-    <form action="/cart/cartFinal" method="POST">
+
+    <form action="/cart/purchase" method="POST" >
         <main class="cartMain">
         
             <section class="pasajeros">
                 <h4>¿Quiénes viajan?</h4>
             
                 <div class="datosPasajeros">
-                    <article class="cantidadPasajeros">
+                   <!-- <article class="cantidadPasajeros">
                         <label for="mayores">Mayores:</label>
-                            <select name="mayores" id="">
+                            <select name="mayores" id="" >
                                 <option value="1">1</option> 
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -21,8 +22,9 @@
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                                 <option value="7">7</option>
-                                <option value="8">8</option>
+                                <option value="8">8</option> 
                             </select>
+                           
                 
                         <label for="menores">Menores:</label>
                             <select name="menores" id="">
@@ -35,43 +37,98 @@
                                 <option value="7">7</option>
                                 <option value="8">8</option>
                             </select>
-                    </article>
+                    </article>-->
                     <article>
                         <div >
+                            
                             <label for="first_name"> Nombre:</label>
-                                <input type="text" name="first_name" id="txtfirst_name" placeholder="Juan Pablo" required>
+                                <input type="text" name="first_name" id="txtfirst_name" placeholder="Juan Pablo" 
+                                    class=" <%= locals.errors && errors.first_name ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.first_name : null %>" >
+                                <% if(locals.errors && errors.first_name){ %> 
+                                    <div class="errors_form"> <%= errors.first_name.msg %> </div>
+                                <% } %> 
                         </div>
                         <div >
                             <label for="last_name"> Apellido:</label>
-                                <input type="text" name="last_name" id="txtlast_name" placeholder="Perez" required>
+                                <input type="text" name="last_name" id="txtlast_name" placeholder="Perez" 
+                                    class=" <%= locals.errors && errors.last_name ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.last_name : null %>" >
+                                <% if(locals.errors && errors.last_name){ %> 
+                                    <div class="errors_form"> <%= errors.last_name.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="birth_date">Fecha Nacimiento:</label>
-                                <input type="date" name="birth_date" id="txbirth_date" required>
+                                <input type="date" name="birth_date" id="txbirth_date" 
+                                    class=" <%= locals.errors && errors.birth_date ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.birth_date : null %>" >
+                                <% if(locals.errors && errors.birth_date){ %> 
+                                    <div class="errors_form"> <%= errors.birth_date.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="age">Edad:</label>
-                                <input type="number" name="age" id="txage" required>
+                                <input type="number" name="age" id="txage" placeholder="32"
+                                    class=" <%= locals.errors && errors.age ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.age : null %>" >
+                                <% if(locals.errors && errors.age){ %> 
+                                    <div class="errors_form"> <%= errors.age.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="identity_document">Nro. Documento:</label>
-                                <input type="number" name="identity_document" id="txidentity_document" placeholder="23485265" maxlength="8" required>
+                                <input type="number" name="identity_document" id="txidentity_document" placeholder="23485265" 
+                                    class=" <%= locals.errors && errors.identity_document ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.identity_document : null %>" >
+                                <% if(locals.errors && errors.identity_document){ %> 
+                                    <div class="errors_form"> <%= errors.identity_document.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="home">Domicilio:</label>
-                                <input type="text" name="home" id="txdhome" placeholder="Florida 2365" required>
+                                <input type="text" name="home" id="txdhome" placeholder="Florida 2365"
+                                    class=" <%= locals.errors && errors.home ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.home : null %>" >
+                                <% if(locals.errors && errors.home){ %> 
+                                    <div class="errors_form"> <%= errors.home.msg %> </div>
+                                <% } %> 
+                        </div>
+                        <div>
+                            <label for="home">Código Postal:</label>
+                                <input type="number" name="postal_code" id="txdhome" placeholder="4000" 
+                                    class=" <%= locals.errors && errors.postal_code ? 'this_is_invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.postal_code : null %>">
+                                <% if(locals.errors && errors.postal_code){ %> 
+                                    <div class="errors_form"> <%= errors.postal_code.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="province">Provincia:</label>
-                                <input type="text" name="province" id="txprovince" placeholder="Tucumán" required>
+                                <input type="text" name="province" id="txprovince" placeholder="Tucumán" 
+                                    class=" <%= locals.errors && errors.province ? 'this_is_invalid' : null %>"    
+                                    value="<%= locals.oldData ? oldData.province : null %>">
+                                <% if(locals.errors && errors.province){ %> 
+                                    <div class="errors_form"> <%= errors.province.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="email">Email:</label>
-                                <input type="email" name="email" id="txemail" placeholder="soledad@gmail.com" required maxlength="20">
+                                <input type="email" name="email" id="txemail" placeholder="soledad@gmail.com"
+                                class=" <%= locals.errors && errors.email ? 'this_is_invalid' : null %>" 
+                                value="<%= locals.oldData ? oldData.email : null %>">
+                                <% if(locals.errors && errors.email){ %> 
+                                    <div class="errors_form"> <%= errors.email.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="phone_number">Nro. Contacto:</label>
-                                <input type="tel" name="phone_number" id="txphone_number" placeholder="381456987" required minlength="9">
+                                <input type="tel" name="phone_number" id="txphone_number" placeholder="381456987" 
+                                    class=" <%= locals.errors && errors.phone_number ? 'this_is_invalid' : null %>" 
+                                    value="<%= locals.oldData ? oldData.phone_number : null %>">
+                                <% if(locals.errors && errors.phone_number){ %> 
+                                    <div class="errors_form"> <%= errors.phone_number.msg %> </div>
+                                <% } %> 
                         </div>
                     </article>
                 </div>
@@ -85,35 +142,60 @@
                     <article class="medioPago">
                         <div class="datosPago">
                             <label for="payment_method">Tarjeta débito</label>
-                                <input type="radio" name="payment_method" value="debito">
+                                <input type="radio" name="payment_method" value="debito" 
+                                <%= locals.oldData &&  oldData.payment_method === "debito" ? "checked" : null %>>
                             <label for="payment_method">Tarjeta crédito</label>     
-                                <input type="radio" name="payment_method" value="tarjeta">
+                                <input type="radio" name="payment_method" value="tarjeta"
+                                <%= locals.oldData &&  oldData.payment_method === "tarjeta credito" ? "checked" : null %>>
+                                <% if(locals.errors && errors.payment_method){ %> 
+                                    <div class="errors_form"> <%= errors.payment_method.msg %> </div>
+                                <% } %> 
                         </div>
                         
                     </article>
                     <article class="pagoTarjeta"> 
                         <div>
                             <label for="card_number">Nro de tarjeta</label>
-                                <input type="number" name="card_number" id="txcard_number" placeholder="ingrese nro" required>
+                                <input type="number" name="card_number" id="txcard_number" placeholder="5684 6589 6244 1254" 
+                                    class=" <%= locals.errors && errors.card_number ? 'this_is_invalid' : null %>" 
+                                    value="<%= locals.oldData ? oldData.card_number : null %>">
+                                <% if(locals.errors && errors.card_number){ %> 
+                                    <div class="errors_form"> <%= errors.card_number.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="name_card_holder">Titular tarjeta</label>
-                                <input type="text" name="name_card_holder" id="txname_card_holder" placeholder="como figura en su tarjeta" required>
+                                <input type="text" name="name_card_holder" id="txname_card_holder" placeholder="como figura en su tarjeta" 
+                                class=" <%= locals.errors && errors.name_card_holder ? 'this_is_invalid' : null %>" 
+                                value="<%= locals.oldData ? oldData.name_card_holder : null %>">
+                                <% if(locals.errors && errors.name_card_holder){ %> 
+                                    <div class="errors_form"> <%= errors.name_card_holder.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="expiration">Vencimiento</label>
-                                <input type="number" name="expiration" id="txexpiration" placeholder="10/24" required minlength="4">
+                                <input type="number" name="expiration"  id="txexpiration" placeholder="10/24" 
+                                    class=" <%= locals.errors && errors.expiration ? 'this_is_invalid' : null %>" 
+                                    value="<%= locals.oldData ? oldData.expiration : null %>">
+                                <% if(locals.errors && errors.expiration){ %> 
+                                    <div class="errors_form"> <%= errors.expiration.msg %> </div>
+                                <% } %> 
                         </div>
                         <div>
                             <label for="security_code">Código seguridad</label>
-                                <input type="number" name="security_code" id="txsecurity_code" placeholder="5684 6589 6244 1254" minlength="3" maxlength="5" required>
+                                <input type="number" name="security_code" id="txsecurity_code" placeholder="220"  
+                                    class=" <%= locals.errors && errors.security_code ? 'this_is_invalid' : null %>" 
+                                 value="<%= locals.oldData ? oldData.security_code : null %>">
+                                <% if(locals.errors && errors.security_code){ %> 
+                                    <div class="errors_form"> <%= errors.security_code.msg %> </div>
+                                <% } %> 
                         </div>
                     </article>
                 </div>
         
                 <div class="div_boton_form">
-                    <a href="/cart/cartFinal">
-                        <button class= "botonForm" type="submit" value="submit" form="cartFinal">Pagar</button>
+               
+                        <button class= "botonForm" type="submit" value="pago" >Pagar</button>
                     </a>
                         <button class="botonForm" type="reset" >Borrar</button>
                 </div>

@@ -53,7 +53,7 @@ sprint 4
 
 	Ignacio Parisi redactara el archivo retro.md.
 	Creara el archivo admin_users para manejar los usuarios.
-	CRUD de Admin_users
+	
 	
 	Silvana Acotto tomara nota de los temas desarrollados en cada Daily.
 	Definirá los campos necesarios para los usuarios y creará el archivo users.json dentro de la carpeta data.
@@ -65,6 +65,40 @@ sprint 4
 
 
 	Próxima Daily: 08/04/22 18 hs.	
+	
+	sprint 5
+
+
+	Leimos y analizamos la consigna del sprint 5.
+
+	Dividimos las tareas:
+
+	- Walter Leskovar se encargara de planificar el tablero de tareas en Trello.
+	Implementara un selector de Paquetes en el Home del Sitio
+	
+	- Facundo Minuto recorrera el sitio web completo y revisara si hay algo por corregir que haya quedado pendiente.
+	Implementara la funcionalidad de  Newslatter.
+	
+	- Ignacio Parisi redactara el archivo retro.md.
+	Formulario de registro con:
+ 	Guardado en JSON con encriptación de contraseña.
+	
+	Formulario de login con:	
+	Campos de email y password.
+	Función de recordar al usuario.
+
+	Rutas de huéspedes y usuarios:
+ 	Las de huéspedes deberán redireccionar al perfil si el usuario está logueado.
+	Las de usuarios deberán redireccionar al login si el usuario no está logueado.
+	
+	- Silvana Acotto tomara nota de los temas desarrollados en cada Daily.
+	CRUD Usuarios Admin
+	Revision Crud Carrito
+
+
+
+
+
 
 
 

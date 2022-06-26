@@ -1,11 +1,154 @@
 <main class="main">
-    <form class= "form_main" action="/productSelect" method="GET" id="form_home">
-            <label for="selector_paquetes">Paquetes turísticos: </label>
-            <select name="paquete">
-                <% for (let selector of selector_paquetes) {%>
-                    <option value="<%= selector.package_id%>"><%= selector.package_title%></option>
-                <% } %>  
-            </select name="paquete">
-    </form>
-    <button class= "boton_main" type="submit" form="form_home" value="Submit">ir al Detalle</button>
+    <div class="container">
+        <div class="row ml-50">
+            <div class="col">
+                <div class="carousel slide" id="paisajes-carousel" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" >
+                            <div class="carousel-caption">
+                                <h5>Buenos Aires</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice1.webp" alt="slice1">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Bariloche</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice2.webp" alt="slice2">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Ushuaia</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice3.webp" alt="slice3">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Mendoza</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice4.webp" alt="slice4">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Iguazu</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice5.webp" alt="slice5">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Puerto de Ushuaia</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice6.webp" alt="slice6">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>San Rafael</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice7.webp" alt="slice7">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption">
+                                <h5>Fin del Mundo</h5>
+                            </div>
+                            <img class="d-block w-100" src="/images/carousel/slice8.webp" alt="slice8">
+                        </div>
+                    </div>
+                    <!-- Controles -->
+                    <button 
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#paisajes-carousel"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Anterior</span>
+					</button>
+
+					<button 
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#paisajes-carousel"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Siguiente</span>
+					</button>
+                    <!-- Indicadores -->
+					<div class="carousel-indicators">
+						<button 
+							type="button"
+							class="active"
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="0"
+							aria-label="Slide 1"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="3"
+							aria-label="Slide 4"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="4"
+							aria-label="Slide 5"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="5"
+							aria-label="Slide 6"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="6"
+							aria-label="Slide 7"
+						></button>
+						<button 
+							type="button"
+							class=""
+							data-bs-target="#paisajes-carousel"
+							data-bs-slide-to="7"
+							aria-label="Slide 8"
+						></button>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="row  mt-5 bg-secondary" style="--bs-bg-opacity: .5;">
+            <div class="col-6">
+                <form class= "form_main" action="/productSelect" method="GET" id="form_home">
+                        <label for="selector_paquetes" class="text-white">Paquetes turísticos: </label>
+                        <select name="paquete">
+                            <% for (let selector of selector_paquetes) {%>
+                                <option value="<%= selector.package_id%>"><%= selector.package_title%></option>
+                            <% } %>  
+                        </select name="paquete">
+                </form>
+            </div>
+            <div class="col-6">
+                <button class= "boton_main" type="submit" form="form_home" value="Submit">ir al Detalle</button>
+            </div>
+        </div>
+    </div>
 </main>

@@ -1,0 +1,56 @@
+<%- include('./partials/head') %>
+
+<body>
+
+  <%- include('./partials/nav_admin') %>
+
+
+  <%- include('./partials/header_admin') %>
+  <div class="main_users_detail">
+    <h1 class="main_title">Administracion de Usuarios</h1>
+  <p class="title_users">Detalle de Usuario</p>
+  <a class="crear_text_admin" href="/admin/users"><img class= "volver_admin" src="/images/arrow-left-solid.svg" alt="Crear" ></a>
+       
+  <% if(user) {%>
+        <div class="users_list">
+       
+          <img  class="user_avatar" src="/images/users/avatars/<%= user.avatar ? user.avatar : "user_avatar_default.png" %>">
+            <p class="user_id" id="<%=user.id%> class="user_id">ID: <%= user.id %> </p>
+            <p class="user_name">Nombre: <%= user.user %></p>
+            <p class="user_email">Email: <%= user.email %></p>
+    <% } %> 
+          <% if(user3 && user4) { %>
+           
+            <p> <%= user.user %> compro en nuestro sitio y tiene compras pendientes </p>
+              <form action="#" method="get" class="subtitle_button"></form>
+            
+                <label >Enviar recordatorio de compra </label>
+                  <a href='https://accounts.google.com'><button  type="submit" form="/newsletter">Enviar</button></a>
+                    <%- include('./partials/edit_delete_admin') %>
+        
+           <% } else if( user3) { %>
+            
+              <p> <%= user.user %> compro en nuestro sitio </p>
+                <%- include('./partials/edit_delete_admin') %>
+         
+            <% } else if(user4) { %>
+
+              <form action="#" method="get" class="subtitle_button">
+                <p><%= user.user %> tiene compras pendientes</p>
+                  <label >Enviar recordatorio de compra </label>
+                  <a href='https://accounts.google.com'><button  type="submit" form="/newsletter">Enviar</button></a>
+                  <%- include('./partials/edit_delete_admin') %>
+                </form>
+          <% } else {%> 
+   
+                <p><%= user.user %> no tiene compras registradas</p>
+                    <%- include('./partials/delete_admin') %>
+          <% } %>  
+
+       
+          
+</div>
+
+  </header>
+</body>
+</html>

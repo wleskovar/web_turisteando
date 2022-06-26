@@ -6,13 +6,15 @@
     
         <main class="cartMain" >
             <section class="sectionCart">
+ 
                 <h2 class="h2Cart">Carrito</h2>
+                
                 <% for (let paquete of data_show_cart) {%>
                     
             
                     <article <%= paquete.package_id %> class="porComprar">
                         <p class="descripcionCart"><%= paquete.package_name %> 
-                            <form action="/cart/delete/<%= paquete.package_id %>" method= "post">
+                            <form action="/cart/delete/<%= paquete.package_id %>?_method=DELETE"" method="post" >
                                 <button  class="remove" type="submit" name="button_reset" ><i class="fa-solid fa-trash-can"></i></button></a>
                             </form>  
                         </p>
@@ -34,16 +36,18 @@
             <section>
 
                     <article>  
+                       
                         <div class="start_buy" >
                             <p class="textTotal"><strong>Total:</strong></p>
-                            <p class="montoTotal"><strong>$40.770</strong></p>
-                        
-                       
+                      
+                            <p class="montoTotal"><strong>  </strong></p>
+         |               
+               
                             <div class="action_cart">
                             
-                                <form action="cart/cartForm" method="get">
-                                    <a href="cart/cartForm" for="start_buy"> 
-                                    <button class="botonPago" type="submit" value="sumbit" name="start_buy" id="start_buy">Iniciar compra</button></a>
+                                <form action="/cart/purchase" method="get">
+                                   
+                                    <button class="botonPago" type="submit" value="iniciar_compra" name="start_buy" id="start_buy">Iniciar compra</button></a>
                                 </form>
                             
                                 <label class="keep_buy">
