@@ -24,6 +24,13 @@
 }
 /* ===============================================================================*/
 
+/* Estilo de la clase de errores del formulario */
+.errores_formulario_v {
+  color: red;
+}
+
+/* ===============================================================================*/
+
 html {
   box-sizing: border-box;
   overflow-x: hidden;

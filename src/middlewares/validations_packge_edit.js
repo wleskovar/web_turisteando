@@ -18,19 +18,7 @@ const validations_package= [
     body('package_discount')
         .notEmpty().withMessage('Ingrese el porcentaje de descuento sobre el precio del paquete').bail()
         .isNumeric().withMessage('El valor a ingresar es númerico'),
-    body('turisteando_image').custom((value, { req }) => {
-        let file = req.file;
-        let accept_extensions = ['.jpeg', '.png', '.webp'];
-        if (!file) {
-            throw new Error('Debe subir una imagen para el paquete');
-        } else {
-            let file_extension = path.extname(file.originalname)
-            if (!accept_extensions.includes(file_extension)) {
-                throw new Error(`Las extenciones de archivos permitidas son ${accept_extensions.join(',')}`);
-        }
-       }
-       return true;
-    })
+    
 ];
 
 module.exports = validations_package;

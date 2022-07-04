@@ -101,6 +101,7 @@ const engine= {
     },
     
     read_db: function (name_table) {
+        if (name_table == 'Producto') {
             return db[name_table].findAll({
                 // en el include se obtienen los datos de las tablas relacionadas "hotels" y "tours"
                 include: [{association:"hotel", include: [{association:"province"}]}, {association:"tour"}],
@@ -108,6 +109,21 @@ const engine= {
                 raw: true,
                 nest: true,
             });
+        }else if (name_table == 'Hotel') {
+            return db[name_table].findAll({
+                // en el include se obtienen los datos de las tablas relacionadas "province"
+                include: {association:"province"},
+                // Los parametros "raw en true" y "nest en true" son para obtener un objeto plano
+                raw: true,
+                nest: true,
+            });
+        }else {
+            return db[name_table].findAll({
+                // Los parametros "raw en true" y "nest en true" son para obtener un objeto plano
+                raw: true,
+                nest: true,
+            });
+        };
     },
 
     write_json: function (name_table, file_string){

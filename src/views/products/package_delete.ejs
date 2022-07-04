@@ -16,14 +16,14 @@
             <label>package_price: <%= package.package_price%></label>
             <label>package_title: <%= package.package_title%></label>
             <label>package_q_days: <%= package.package_q_days%></label>
-            <label>package_hotel: <%= package.package_hotel%></label>
+            <label>package_hotel: <%= package.package_hotel%> - <%= package.hotel.nombre%></label>
             <label>package_stars_hotel: <%= package.package_stars_hotel%></label>
             <label>package_description: <%= package.package_description%></label>
             <label>package_date_admission: <%= fecha_admision.fecha%></label>
             <label for="package_index">package_index: <%= package.package_index%></label>
             <label for="package_category">package_category: <%= package.package_category%></label>
             <label for="package_transportation">package_transportation: <%= package.package_transportation%></label>
-            <label>package_excursions_id: <%= package.package_excursions_id%></label>
+            <label>package_excursions_id: <%= package.package_excursions_id%> - <%= package.tour.name%></label>
             <label>package_discount: <%= package.package_discount%></label>
         <button type= "submit" class="boton_formulario">DELETE</button>
         <button type="reset" class="boton_formulario"><a href="/admin/productos">Cancelar</a></button>

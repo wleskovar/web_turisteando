@@ -17,7 +17,7 @@
             <p class="campos_admin">Vidriera del Home: <%= paquete.package_index== "1"? "SI" : "NO"%></p>
             <p class="campos_admin">Categorias: <%= paquete.package_category== "1" ? "Paquete regular" : "Paquete oferta"%></p>
             <p class="campos_admin">Transporte: <%= paquete.package_transportation== "1" ? "Aereo" : paquete.package_transportation== "2" ? "Bus" : "Sin transporte"%></p>
-            <p class="campos_admin">Excursiones: <%= paquete.package_excursions_id%></p>
+            <p class="campos_admin">Excursiones: <%= paquete.package_excursions_id%> - <%= paquete.tour.name%></p>
             <p class="campos_admin">Descuento: <%= paquete.package_discount%>%</p>
         </div>
     </div>
